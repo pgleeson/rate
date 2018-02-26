@@ -27,6 +27,7 @@
 
         <Dynamics>
 
+            <StateVariable name="v" dimension="voltage" exposure="v"/>
             <StateVariable name="r" dimension="per_time" exposure="r" description="Rate..."/>
             
             <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
@@ -47,6 +48,28 @@
 
         </Dynamics>
 
+    </ComponentType>
+    
+    
+    <ComponentType name="rateSynapse"
+                   extends="baseGradedSynapse"
+                   description="...">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> 
+        
+        <Constant name="MSEC" dimension="time" value="1ms"/>
+        <Constant name="PAMP" dimension="current" value="10nA"/>
+        
+        <Exposure name="i" dimension="current"/>
+        
+        <Requirement name="r" dimension="per_time"/>
+
+        <InstanceRequirement name="peer" type="rateSynapse"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="per_time" select="peer/r"/>
+            <DerivedVariable name="i" exposure="i"  value="weight * MSEC * PAMP * rpeer"/>
+        </Dynamics>
     </ComponentType>
     
 </Lems>

@@ -12,13 +12,40 @@
 
     <!-- Main NeuroML2 content. Based on http://www.scholarpedia.org/article/FitzHugh-Nagumo_model -->
 
-    <rateCell id="E" Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="6.25nS" tau="28ms" tau_r="2ms"/>
+    <rateCell id="E"   Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="6.25nS" tau="28ms" tau_r="2ms"/>
+    <rateCell id="PV"  Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="10nS"   tau="8ms"  tau_r="2ms"/>
+    <rateCell id="SST" Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="5nS"    tau="16ms" tau_r="2ms"/>
+    <rateCell id="VIP" Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="5nS"    tau="16ms" tau_r="2ms"/>
+    
+    <!--Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.-->
+    <silentSynapse id="silent1"/>
+    
+    <rateSynapse id="rs" />
 
-    <pulseGenerator id="pulseGen1" delay="5ms" duration="15ms" amplitude="136.4 pA" />
+
+    <pulseGenerator id="baselineE" delay="5ms" duration="15ms" amplitude="136.4 pA" />
+    <pulseGenerator id="baselinePV" delay="5ms" duration="15ms" amplitude="238.8 pA" />
+    <pulseGenerator id="baselineSST" delay="5ms" duration="15ms" amplitude="92.6 pA" />
+    <pulseGenerator id="baselineVIP" delay="5ms" duration="15ms" amplitude="91.8 pA" />
 
     <network id="net1">
         <population id="ePop" component="E" size="1" />
-        <explicitInput target="ePop[0]" input="pulseGen1" destination="synapses"/>
+        <population id="pvPop" component="PV" size="1" />
+        <population id="sstPop" component="SST" size="1" />
+        <population id="vipPop" component="VIP" size="1" />
+        
+        
+        <continuousProjection id ="vip_sst" presynapticPopulation="vipPop" postsynapticPopulation="sstPop">
+            <continuousConnection id="0" preCell="0" postCell="0" preComponent="silent1" postComponent="rs"/>
+        </continuousProjection>
+        
+        
+        <!--<explicitInput target="ePop[0]" input="baselineE" destination="synapses"/>
+        <explicitInput target="pvPop[0]" input="baselinePV" destination="synapses"/>
+        <explicitInput target="sstPop[0]" input="baselineSST" destination="synapses"/>-->
+        <explicitInput target="vipPop[0]" input="baselineVIP" destination="synapses"/>
+        
+        
     </network>
 
     <!-- End of NeuroML2 content -->
@@ -28,12 +55,24 @@
 
         <Display id="d1" title="Voltages" timeScale="1s" xmin="-2" xmax="32" ymin="-80" ymax="10">
             <Line id="e" quantity="ePop[0]/V" scale="1mV" color="#ee40FF" timeScale="1ms" />
+            <Line id="pv" quantity="pvPop[0]/V" scale="1mV" color="#aaa333" timeScale="1ms" />
+            <Line id="sst" quantity="sstPop[0]/V" scale="1mV" color="#ee7777" timeScale="1ms" />
+            <Line id="vip" quantity="vipPop[0]/V" scale="1mV" color="#e9999F" timeScale="1ms" />
         </Display>
         
-        <Display id="d2" title="Rates" timeScale="1s" xmin="-2" xmax="32" ymin="-80" ymax="10">
+        <Display id="d2" title="Rates" timeScale="1s" xmin="-2" xmax="32" ymin="-2" ymax="12">
             <Line id="e" quantity="ePop[0]/r" scale="1Hz" color="#ee40FF" timeScale="1ms" />
+            <Line id="pv" quantity="pvPop[0]/r" scale="1Hz" color="#aaa333" timeScale="1ms" />
+            <Line id="sst" quantity="sstPop[0]/r" scale="1Hz" color="#ee7777" timeScale="1ms" />
+            <Line id="vip" quantity="vipPop[0]/r" scale="1Hz" color="#e9999F" timeScale="1ms" />
         </Display>
     
+        <OutputFile id="of1" fileName="rates.dat">
+            <OutputColumn id="e" quantity="ePop[0]/r"/> 
+            <OutputColumn id="pv" quantity="pvPop[0]/r"/> 
+            <OutputColumn id="sst" quantity="sstPop[0]/r"/> 
+            <OutputColumn id="vip" quantity="vipPop[0]/r"/> 
+        </OutputFile> 
 
     </Simulation>
 
