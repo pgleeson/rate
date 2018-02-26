@@ -58,7 +58,7 @@
         <Property name="weight" dimension="none" defaultValue="1"/> 
         
         <Constant name="MSEC" dimension="time" value="1ms"/>
-        <Constant name="PAMP" dimension="current" value="10nA"/>
+        <Constant name="PAMP" dimension="current" value="1nA"/>
         
         <Exposure name="i" dimension="current"/>
         
