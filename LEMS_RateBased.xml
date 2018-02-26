@@ -1,0 +1,41 @@
+<Lems>
+
+    <Target component="sim1" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="RateBased.xml" />
+
+
+    <!-- Main NeuroML2 content. Based on http://www.scholarpedia.org/article/FitzHugh-Nagumo_model -->
+
+    <rateCell id="E" Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="6.25nS" tau="28ms" tau_r="2ms"/>
+
+    <pulseGenerator id="pulseGen1" delay="5ms" duration="15ms" amplitude="136.4 pA" />
+
+    <network id="net1">
+        <population id="ePop" component="E" size="1" />
+        <explicitInput target="ePop[0]" input="pulseGen1" destination="synapses"/>
+    </network>
+
+    <!-- End of NeuroML2 content -->
+
+
+    <Simulation id="sim1" length="30ms" step="0.01ms" target="net1">
+
+        <Display id="d1" title="Voltages" timeScale="1s" xmin="-2" xmax="32" ymin="-80" ymax="10">
+            <Line id="e" quantity="ePop[0]/V" scale="1mV" color="#ee40FF" timeScale="1ms" />
+        </Display>
+        
+        <Display id="d2" title="Rates" timeScale="1s" xmin="-2" xmax="32" ymin="-80" ymax="10">
+            <Line id="e" quantity="ePop[0]/r" scale="1Hz" color="#ee40FF" timeScale="1ms" />
+        </Display>
+    
+
+    </Simulation>
+
+
+</Lems>
