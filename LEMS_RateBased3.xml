@@ -19,6 +19,9 @@
     <!--Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.-->
     <silentSynapse id="silent1"/>
     <rateSynapse id="rs" />
+    
+    <silentSynapseDL id="silent1DL"/>
+    <rateSynapseDL id="rsDL" />
 
     <pulseGeneratorDL id="baselineE_dl" delay="50ms" duration="50ms" amplitude="8" />
 
@@ -37,6 +40,10 @@
             <continuousConnectionInstanceW id="0" preCell="../ePop[0]" postCell="../iPop[0]" preComponent="silent1" postComponent="rs" weight=".1"/>
         </continuousProjection>
         
+        <continuousProjection id ="e_i_dl" presynapticPopulation="ePopDL" postsynapticPopulation="iPopDL">
+            <continuousConnectionInstanceW id="0" preCell="../ePopDL[0]" postCell="../iPopDL[0]" preComponent="silent1DL" postComponent="rsDL" weight=".1"/>
+        </continuousProjection>
+        
         <explicitInput target="ePopDL[0]" input="baselineE_dl" destination="synapses"/>
         <explicitInput target="ePop[0]" input="baselineE" destination="synapses"/>
         
@@ -52,6 +59,13 @@
             <Line id="phi e" quantity="ePop[0]/phi" scale="1" color="#7777ff" timeScale="1ms" />
             <Line id="isyn i" quantity="iPop[0]/iSyn" scale="1nA" color="#ff0000" timeScale="1ms" />
             <Line id="phi i" quantity="iPop[0]/phi" scale="1" color="#ff7777" timeScale="1ms" />
+        </Display>
+
+        <Display id="d1DL" title="Inputs DL" timeScale="1s" xmin="-20" xmax="220" ymin="-1" ymax="11">
+            <Line id="isyn e DL" quantity="ePopDL[0]/ISyn" scale="1" color="#0000ff" timeScale="1ms" />
+            <Line id="phi e DL" quantity="ePopDL[0]/phi" scale="1" color="#7777ff" timeScale="1ms" />
+            <Line id="isyn i DL" quantity="iPopDL[0]/ISyn" scale="1" color="#ff0000" timeScale="1ms" />
+            <Line id="phi i DL" quantity="iPopDL[0]/phi" scale="1" color="#ff7777" timeScale="1ms" />
         </Display>
         
         <Display id="d2" title="Rates DL" timeScale="1s" xmin="-20" xmax="220" ymin="-1" ymax="11">

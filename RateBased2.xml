@@ -12,7 +12,7 @@
     </ComponentType>
     
     <ComponentType name="baseRateUnitDL"
-        extends="baseSpikingCell"
+        extends="baseCellMembPotDL"
         description="Base type of any cell/population which has a (dimensionless) rate _r.">
 
         <Exposure name="R" dimension="none"/>
@@ -89,6 +89,8 @@
 
             <!--<StateVariable name="v" dimension="voltage" exposure="v"/>-->
             
+            <StateVariable name="V" dimension="none" exposure="V"/>
+            
             <StateVariable name="R" dimension="none" exposure="R"/>
             
             <DerivedVariable name="ISyn" dimension="none" exposure="ISyn" select="synapses[*]/I" reduce="add" />
@@ -114,14 +116,34 @@
 
     </ComponentType>
     
-    <!--
+    
+
+    <ComponentType name="silentSynapseDL"
+                   extends="baseGradedSynapse"
+                   description="Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> <!-- Not used...-->
+    
+        <Exposure name="I" dimension="none"/>
+        
+        <Requirement name="V" dimension="none"/>
+
+        <InstanceRequirement name="peer" type="baseGradedSynapse"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="none" select="peer/R"/>
+            <DerivedVariable name="I" exposure="I"  value="0"/>
+        </Dynamics>
+        
+    </ComponentType>
+    
     <ComponentType name="rateSynapseDL"
                    extends="baseGradedSynapse"
                    description="...">
         
         <Property name="weight" dimension="none" defaultValue="1"/> 
         
-        <Constant name="MSEC" dimension="time" value="1ms"/>
+        <Constant name="SEC" dimension="time" value="1s"/>
         
         <Exposure name="I" dimension="none"/>
         
@@ -131,9 +153,9 @@
 
         <Dynamics>
             <DerivedVariable name="rpeer" dimension="none" select="peer/R"/>
-            <DerivedVariable name="I" exposure="I"  value="weight * MSEC * rpeer"/>
+            <DerivedVariable name="I" exposure="I"  value="weight * SEC * rpeer"/>
         </Dynamics>
-    </ComponentType>-->
+    </ComponentType>
     
 
     <ComponentType name="rateSynapse"
