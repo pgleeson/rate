@@ -4,7 +4,7 @@
 
     
     <ComponentType name="baseRateUnit"
-        extends="baseCell"
+        extends="baseCellMembPot"
         description="Base type of any cell/population which has a (dimensional) rate _r.">
 
         <Exposure name="r" dimension="per_time"/>
@@ -21,6 +21,54 @@
     </ComponentType>
     
     
+    <ComponentType  name="simpleRateUnit"
+                    extends="baseRateUnit"
+                    description="...">
+
+        <Parameter name="r0" dimension="per_time"/>
+        <Parameter name="tau" dimension="time"/>
+
+        <Attachments name="synapses" type="basePointCurrent"/>
+        
+        <Exposure name="iSyn" dimension="current"/>
+        <Exposure name="phi" dimension="current"/>
+        
+        <Constant name="NAMP_SCALE" dimension="current" value="1 nA"/>
+        <Constant name="HZ_SCALE" dimension="per_time" value="1 Hz"/>
+        
+
+        <Dynamics>
+
+            <!--<StateVariable name="v" dimension="voltage" exposure="v"/>-->
+            
+            <StateVariable name="v" dimension="voltage" exposure="v"/>
+            
+            <StateVariable name="r" dimension="per_time" exposure="r"/>
+            
+            <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
+           
+            
+            <ConditionalDerivedVariable name="phi" dimension="none" exposure="phi">
+            	<Case condition="iSyn .eq. 0*NAMP_SCALE" value="1"/>
+            	<Case condition="iSyn .neq. 0*NAMP_SCALE" value="iSyn / ( (1 - exp(-1*iSyn/NAMP_SCALE)) * NAMP_SCALE)"/>
+            </ConditionalDerivedVariable> 
+
+            <TimeDerivative variable="r" value="(-1*r + phi*HZ_SCALE)/tau"/>
+            
+            <OnStart>
+                <StateAssignment variable="r" value="r0"/>
+            </OnStart>
+            <!--
+            -->
+            <OnCondition test="r .gt. 100*r0">
+                <EventOut port="spike"/>
+            </OnCondition>
+
+        </Dynamics>
+
+    </ComponentType>
+    
+    
     <ComponentType  name="simpleRateUnitDL"
                     extends="baseRateUnitDL"
                     description="...">
@@ -32,7 +80,7 @@
 
         <Attachments name="synapses" type="basePointCurrentDL"/>
         
-        <Exposure name="ISyn" dimension="current"/>
+        <Exposure name="ISyn" dimension="none"/>
         
         <Exposure name="phi" dimension="none"/>
         
@@ -67,14 +115,35 @@
     </ComponentType>
     
     <!--
-    <ComponentType name="rateSynapse"
+    <ComponentType name="rateSynapseDL"
                    extends="baseGradedSynapse"
                    description="...">
         
         <Property name="weight" dimension="none" defaultValue="1"/> 
         
         <Constant name="MSEC" dimension="time" value="1ms"/>
-        <Constant name="PAMP" dimension="current" value="1nA"/>
+        
+        <Exposure name="I" dimension="none"/>
+        
+        <Requirement name="R" dimension="none"/>
+
+        <InstanceRequirement name="peer" type="rateSynapseDL"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="none" select="peer/R"/>
+            <DerivedVariable name="I" exposure="I"  value="weight * MSEC * rpeer"/>
+        </Dynamics>
+    </ComponentType>-->
+    
+
+    <ComponentType name="rateSynapse"
+                   extends="baseGradedSynapse"
+                   description="...">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> 
+        
+        <Constant name="SEC" dimension="time" value="1s"/>
+        <Constant name="NAMP_SCALE" dimension="current" value="1nA"/>
         
         <Exposure name="i" dimension="current"/>
         
@@ -84,8 +153,8 @@
 
         <Dynamics>
             <DerivedVariable name="rpeer" dimension="per_time" select="peer/r"/>
-            <DerivedVariable name="i" exposure="i"  value="weight * MSEC * PAMP * rpeer"/>
+            <DerivedVariable name="i" exposure="i"  value="weight * SEC * NAMP_SCALE * rpeer"/>
         </Dynamics>
-    </ComponentType>-->
+    </ComponentType>
     
 </Lems>
