@@ -9,6 +9,8 @@
     
     <Include file="RateBased.xml" />
 
+    <Include file="NoisyCurrentSource.xml" />
+
 
 
     <rateCell id="E"  Vth="-50mV" Vr="-60mV" Vl="-70mV" Vscale="1mV" gl="6.25nS" tau="28ms" tau_r="2ms"/>
@@ -19,13 +21,15 @@
     
     <rateSynapse id="rs" />
 
-    <pulseGenerator id="baselineE" delay="5ms" duration="250ms" amplitude="136.4 pA" />
-    <pulseGenerator id="baselineI" delay="5ms" duration="250ms" amplitude="120 pA" />
+    <pulseGenerator id="baselineE" delay="5ms" duration="30ms" amplitude="136.4 pA" />
+    <pulseGenerator id="baselineI" delay="5ms" duration="30ms" amplitude="120 pA" />
     
     <pulseGenerator id="modE" delay="30ms" duration="30ms" amplitude="35 pA" />
     <pulseGenerator id="modI" delay="70ms" duration="30ms" amplitude="35 pA" />
     
     <sineGenerator id="sg0" phase="0" delay="120ms" duration="50ms" amplitude="0.02nA" period="10ms"/>
+    
+    <noisyCurrentSource id="noisyCurrentSource1" delay="220ms" duration="50ms" mean="0.03 nA" stdev="0.01 nA" noiseDt="0.5ms"/>
 
     <network id="net1">
         <population id="ePop" component="E" size="1" />
@@ -49,12 +53,14 @@
         
         <explicitInput target="ePop[0]" input="sg0" destination="synapses"/>
         
+        <explicitInput target="ePop[0]" input="noisyCurrentSource1" destination="synapses"/>
+        
     </network>
 
     <!-- End of NeuroML2 content -->
 
 
-    <Simulation id="sim1" length="200ms" step="0.01ms" target="net1">
+    <Simulation id="sim1" length="280ms" step="0.01ms" target="net1">
 
         <Display id="d1" title="Voltages" timeScale="1s" xmin="-20" xmax="220" ymin="-80" ymax="10">
             <Line id="e" quantity="ePop[0]/V" scale="1mV" color="#0000ff" timeScale="1ms" />
