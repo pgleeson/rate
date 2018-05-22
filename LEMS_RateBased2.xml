@@ -19,11 +19,13 @@
     
     <rateSynapse id="rs" />
 
-    <pulseGenerator id="baselineE" delay="5ms" duration="150ms" amplitude="136.4 pA" />
-    <pulseGenerator id="baselineI" delay="5ms" duration="150ms" amplitude="120 pA" />
+    <pulseGenerator id="baselineE" delay="5ms" duration="250ms" amplitude="136.4 pA" />
+    <pulseGenerator id="baselineI" delay="5ms" duration="250ms" amplitude="120 pA" />
     
     <pulseGenerator id="modE" delay="30ms" duration="30ms" amplitude="35 pA" />
     <pulseGenerator id="modI" delay="70ms" duration="30ms" amplitude="35 pA" />
+    
+    <sineGenerator id="sg0" phase="0" delay="120ms" duration="50ms" amplitude="0.02nA" period="10ms"/>
 
     <network id="net1">
         <population id="ePop" component="E" size="1" />
@@ -45,24 +47,25 @@
         <explicitInput target="ePop[0]" input="modE" destination="synapses"/>
         <explicitInput target="iPop[0]" input="modI" destination="synapses"/>
         
+        <explicitInput target="ePop[0]" input="sg0" destination="synapses"/>
         
     </network>
 
     <!-- End of NeuroML2 content -->
 
 
-    <Simulation id="sim1" length="120ms" step="0.01ms" target="net1">
+    <Simulation id="sim1" length="200ms" step="0.01ms" target="net1">
 
-        <Display id="d1" title="Voltages" timeScale="1s" xmin="-2" xmax="122" ymin="-80" ymax="10">
+        <Display id="d1" title="Voltages" timeScale="1s" xmin="-20" xmax="220" ymin="-80" ymax="10">
             <Line id="e" quantity="ePop[0]/V" scale="1mV" color="#0000ff" timeScale="1ms" />
             <Line id="pv" quantity="iPop[0]/V" scale="1mV" color="#ff0000" timeScale="1ms" />
         </Display>
         
-        <Display id="d2" title="Rates" timeScale="1s" xmin="-2" xmax="122" ymin="-2" ymax="32">
-            <Line id="ef" quantity="ePop[0]/f" scale="1Hz" color="#8888ff" timeScale="1ms" />
-            <Line id="el" quantity="ePop[0]/r" scale="1Hz" color="#0000ff" timeScale="1ms" />
-            <Line id="if" quantity="iPop[0]/f" scale="1Hz" color="#ff8888" timeScale="1ms" />
-            <Line id="il" quantity="iPop[0]/r" scale="1Hz" color="#ff0000" timeScale="1ms" />
+        <Display id="d2" title="Rates" timeScale="1s" xmin="-20" xmax="220" ymin="-2" ymax="32">
+            <Line id="f e" quantity="ePop[0]/f" scale="1Hz" color="#aaaaff" timeScale="1ms" />
+            <Line id="rate e" quantity="ePop[0]/r" scale="1Hz" color="#0000ff" timeScale="1ms" />
+            <Line id="f i" quantity="iPop[0]/f" scale="1Hz" color="#ffaaaa" timeScale="1ms" />
+            <Line id="rate i" quantity="iPop[0]/r" scale="1Hz" color="#ff0000" timeScale="1ms" />
         </Display>
     
         <OutputFile id="of1" fileName="rates.dat">
