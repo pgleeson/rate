@@ -1,0 +1,49 @@
+<Lems>
+
+    <Target component="sim1" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="RateBased2.xml" />
+
+
+    <simpleRateUnitDL id="E"  tau="10ms" R0="10"/>
+    
+    <!--Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.
+    <silentSynapse id="silent1"/>
+    
+    <rateSynapse id="rs" />-->
+
+    <pulseGeneratorDL id="baselineE" delay="50ms" duration="50ms" amplitude="8" />
+    
+    
+
+    <network id="net1">
+        <population id="ePop" component="E" size="1" />
+        
+        
+        <explicitInput target="ePop[0]" input="baselineE" destination="synapses"/>
+        
+    </network>
+
+    <!-- End of NeuroML2 content -->
+
+
+    <Simulation id="sim1" length="200ms" step="0.01ms" target="net1">
+<!--
+        <Display id="d1" title="Inputs" timeScale="1s" xmin="-20" xmax="220" ymin="-80" ymax="10">
+            <Line id="isyn e" quantity="ePop[0]/ISyn" scale="1" color="#0000ff" timeScale="1ms" />
+            <Line id="phi e" quantity="ePop[0]/phi" scale="1" color="#ff0000" timeScale="1ms" />
+        </Display>-->
+        
+        <Display id="d2" title="Rates" timeScale="1s" xmin="-20" xmax="220" ymin="-1" ymax="11">
+            <Line id="rate e" quantity="ePop[0]/R" scale="1" color="#0000ff" timeScale="1ms" />
+        </Display>
+    
+    </Simulation>
+
+
+</Lems>

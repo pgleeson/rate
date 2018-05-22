@@ -1,0 +1,91 @@
+<Lems xmlns="http://www.neuroml.org/lems/0.7.4"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.neuroml.org/lems/0.7.4 ../../LEMS/Schemas/LEMS/LEMS_v0.7.4.xsd" >
+
+    
+    <ComponentType name="baseRateUnit"
+        extends="baseCell"
+        description="Base type of any cell/population which has a (dimensional) rate _r.">
+
+        <Exposure name="r" dimension="per_time"/>
+
+    </ComponentType>
+    
+    <ComponentType name="baseRateUnitDL"
+        extends="baseSpikingCell"
+        description="Base type of any cell/population which has a (dimensionless) rate _r.">
+
+        <Exposure name="R" dimension="none"/>
+        
+
+    </ComponentType>
+    
+    
+    <ComponentType  name="simpleRateUnitDL"
+                    extends="baseRateUnitDL"
+                    description="...">
+
+        
+        <Parameter name="R0" dimension="none"/>
+        
+        <Parameter name="tau" dimension="time"/>
+
+        <Attachments name="synapses" type="basePointCurrentDL"/>
+        
+        <Exposure name="ISyn" dimension="current"/>
+        
+        <Exposure name="phi" dimension="none"/>
+        
+
+        <Dynamics>
+
+            <!--<StateVariable name="v" dimension="voltage" exposure="v"/>-->
+            
+            <StateVariable name="R" dimension="none" exposure="R"/>
+            
+            <DerivedVariable name="ISyn" dimension="none" exposure="ISyn" select="synapses[*]/I" reduce="add" />
+           
+            
+            <ConditionalDerivedVariable name="phi" dimension="none" exposure="phi">
+            	<Case condition="ISyn .eq. 0" value="1"/>
+            	<Case condition="ISyn .neq. 0" value="ISyn / (1 - exp(-1*ISyn))"/>
+            </ConditionalDerivedVariable> 
+
+            <TimeDerivative variable="R" value="(-1*R + phi)/tau"/>
+            
+            <OnStart>
+                <StateAssignment variable="R" value="R0"/>
+            </OnStart>
+            <!--
+            -->
+            <OnCondition test="R .gt. R0">
+                <EventOut port="spike"/>
+            </OnCondition>
+
+        </Dynamics>
+
+    </ComponentType>
+    
+    <!--
+    <ComponentType name="rateSynapse"
+                   extends="baseGradedSynapse"
+                   description="...">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> 
+        
+        <Constant name="MSEC" dimension="time" value="1ms"/>
+        <Constant name="PAMP" dimension="current" value="1nA"/>
+        
+        <Exposure name="i" dimension="current"/>
+        
+        <Requirement name="r" dimension="per_time"/>
+
+        <InstanceRequirement name="peer" type="rateSynapse"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="per_time" select="peer/r"/>
+            <DerivedVariable name="i" exposure="i"  value="weight * MSEC * PAMP * rpeer"/>
+        </Dynamics>
+    </ComponentType>-->
+    
+</Lems>
