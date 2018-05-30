@@ -1,0 +1,11 @@
+{
+    "SimRates": {
+        "version": "NeuroMLlite v0.1.4", 
+        "network": "Rates.json", 
+        "duration": 200.0, 
+        "dt": 0.025, 
+        "recordRates": {
+            "all": "*"
+        }
+    }
+}

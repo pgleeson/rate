@@ -2,3 +2,7 @@
 /*.mod
 *_nrn.py
 /x86_64
+/*.gv
+/*.dat
+/report.*.txt
+/LEMS_SimRates.xml

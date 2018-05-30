@@ -1,0 +1,10 @@
+<Lems>
+
+    <Include file="RateBased2.xml" />
+    
+    <simpleRateUnit id="Ecomp"  tau="10ms" r0="0Hz"/>
+    <simpleRateUnit id="Icomp"  tau="5ms" r0="5Hz"/>
+    
+    <pulseGenerator id="baselineE" delay="50ms" duration="50ms" amplitude="8nA" />
+
+</Lems>

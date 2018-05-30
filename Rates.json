@@ -1,0 +1,140 @@
+{
+    "Rates": {
+        "version": "NeuroMLlite v0.1.4", 
+        "parameters": {
+            "input": 10
+        }, 
+        "notes": "Testing...", 
+        "cells": [
+            {
+                "Ecomp": {
+                    "lems_source_file": "SimpleExamples.xml"
+                }
+            }, 
+            {
+                "Icomp": {
+                    "lems_source_file": "SimpleExamples.xml"
+                }
+            }
+        ], 
+        "synapses": [
+            {
+                "ampa": {
+                    "pynn_synapse_type": "cond_alpha", 
+                    "pynn_receptor_type": "excitatory", 
+                    "parameters": {
+                        "e_rev": -10, 
+                        "tau_syn": 2
+                    }
+                }
+            }, 
+            {
+                "gaba": {
+                    "pynn_synapse_type": "cond_alpha", 
+                    "pynn_receptor_type": "inhibitory", 
+                    "parameters": {
+                        "e_rev": -80, 
+                        "tau_syn": 10
+                    }
+                }
+            }
+        ], 
+        "input_sources": [
+            {
+                "iclamp0": {
+                    "pynn_input": "DCSource", 
+                    "parameters": {
+                        "start": 50.0, 
+                        "stop": 150.0, 
+                        "amplitude": 10
+                    }
+                }
+            }
+        ], 
+        "regions": [
+            {
+                "network": {
+                    "x": 0.0, 
+                    "y": 0.0, 
+                    "z": 0.0, 
+                    "width": 100.0, 
+                    "height": 100.0, 
+                    "depth": 10.0
+                }
+            }
+        ], 
+        "populations": [
+            {
+                "Exc": {
+                    "size": 1, 
+                    "component": "Ecomp", 
+                    "properties": {
+                        "color": "0.0313725490196 0.188235294118 0.419607843137"
+                    }, 
+                    "random_layout": {
+                        "region": "network"
+                    }
+                }
+            }, 
+            {
+                "Inh": {
+                    "size": 1, 
+                    "component": "Icomp", 
+                    "properties": {
+                        "color": "0.894117647059 0.101960784314 0.109803921569"
+                    }, 
+                    "random_layout": {
+                        "region": "network"
+                    }
+                }
+            }
+        ], 
+        "projections": [
+            {
+                "proj_Exc_Exc": {
+                    "presynaptic": "Exc", 
+                    "postsynaptic": "Exc", 
+                    "synapse": "ampa", 
+                    "delay": 0, 
+                    "weight": 2.4167
+                }
+            }, 
+            {
+                "proj_Exc_Inh": {
+                    "presynaptic": "Exc", 
+                    "postsynaptic": "Inh", 
+                    "synapse": "ampa", 
+                    "delay": 0, 
+                    "weight": 2.9706
+                }
+            }, 
+            {
+                "proj_Inh_Exc": {
+                    "presynaptic": "Inh", 
+                    "postsynaptic": "Exc", 
+                    "synapse": "ampa", 
+                    "delay": 0, 
+                    "weight": -0.3329
+                }
+            }, 
+            {
+                "proj_Inh_Inh": {
+                    "presynaptic": "Inh", 
+                    "postsynaptic": "Inh", 
+                    "synapse": "ampa", 
+                    "delay": 0, 
+                    "weight": -3.4554
+                }
+            }
+        ], 
+        "inputs": [
+            {
+                "modulation": {
+                    "input_source": "iclamp0", 
+                    "population": "Exc", 
+                    "percentage": 100.0
+                }
+            }
+        ]
+    }
+}
