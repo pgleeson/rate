@@ -10,7 +10,7 @@ import sys
 net = Network(id='Rates')
 net.notes = 'Testing...'
 
-net.parameters = { 'input':10 }
+net.parameters = { 'input':5 }
 
 ecell = Cell(id='Ecomp', lems_source_file='SimpleExamples.xml')
 icell = Cell(id='Icomp', lems_source_file='SimpleExamples.xml')
@@ -22,7 +22,7 @@ net.cells.append(icell)
 
 input_source0 = InputSource(id='iclamp0', 
                            pynn_input='DCSource', 
-                           parameters={'amplitude':8, 'start':50., 'stop':150.})
+                           parameters={'amplitude':2, 'start':50., 'stop':150.})
                            
 net.input_sources.append(input_source0)
 
@@ -48,18 +48,14 @@ net.populations.append(pI)
 pops = [pE,pI]
 
 
-net.synapses.append(Synapse(id='ampa', 
-                            pynn_receptor_type='excitatory', 
-                            pynn_synapse_type='cond_alpha', 
-                            parameters={'e_rev':-10, 'tau_syn':2}))
+net.synapses.append(Synapse(id='rs', 
+                            lems_source_file='SimpleExamples.xml'))
                             
-net.synapses.append(Synapse(id='gaba', 
-                            pynn_receptor_type='inhibitory', 
-                            pynn_synapse_type='cond_alpha', 
-                            parameters={'e_rev':-80, 'tau_syn':10}))
 
 W = [[2.4167,   -0.3329],
     [2.9706,   -3.4554]]
+W = [[0,   0],
+    [2.9706,   0]]
     
 for pre in pops:
     for post in pops:
@@ -71,9 +67,11 @@ for pre in pops:
             net.projections.append(Projection(id='proj_%s_%s'%(pre.id,post.id),
                                               presynaptic=pre.id, 
                                               postsynaptic=post.id,
-                                              synapse='ampa',
+                                              synapse='rs',
+                                              type='continuousProjection',
                                               delay=0,
-                                              weight=weight))
+                                              weight=weight,
+                                              random_connectivity=RandomConnectivity(probability=1)))
                                
                         
 net.inputs.append(Input(id='modulation',

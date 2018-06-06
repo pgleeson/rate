@@ -1,8 +1,7 @@
 <neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="Rates">
     <notes>Generated network</notes>
-    <pulseGenerator id="iclamp0" delay="50.0ms" duration="100.0ms" amplitude="10.0nA"/>
-    <alphaCondSynapse id="ampa" tau_syn="2." e_rev="-10."/>
-    <alphaCondSynapse id="gaba" tau_syn="10." e_rev="-80."/>
+    <silentSynapse id="silentSyn_proj_Exc_Inh"/>
+    <pulseGenerator id="iclamp0" delay="50.0ms" duration="100.0ms" amplitude="2.0nA"/>
     <network id="Rates">
         <notes>Testing...</notes>
         <population id="Exc" component="Ecomp" size="1" type="populationList">
@@ -19,10 +18,10 @@
                 <location x="91.09759624491241" y="93.926899736376399" z="5.822275730589491"/>
             </instance>
         </population>
-        <projection id="proj_Exc_Exc" presynapticPopulation="Exc" postsynapticPopulation="Exc" synapse="ampa"/>
-        <projection id="proj_Exc_Inh" presynapticPopulation="Exc" postsynapticPopulation="Inh" synapse="ampa"/>
-        <projection id="proj_Inh_Exc" presynapticPopulation="Inh" postsynapticPopulation="Exc" synapse="ampa"/>
-        <projection id="proj_Inh_Inh" presynapticPopulation="Inh" postsynapticPopulation="Inh" synapse="ampa"/>
+        <projection id="proj_Exc_Inh" presynapticPopulation="Exc" postsynapticPopulation="Inh" synapse="rs"/>
+        <continuousProjection id="proj_Exc_Inh" presynapticPopulation="Exc" postsynapticPopulation="Inh">
+            <continuousConnectionInstanceW id="0" preCell="../Exc/0/Ecomp" postCell="../Inh/0/Icomp" preComponent="silentSyn_proj_Exc_Inh" postComponent="rs" weight="2.9706"/>
+        </continuousProjection>
         <inputList id="modulation" population="Exc" component="iclamp0">
             <input id="0" target="../Exc/0/Ecomp" destination="synapses"/>
         </inputList>

@@ -2,6 +2,10 @@
 
     <Include file="RateBased2.xml" />
     
+    <!--Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.-->
+    <silentSynapse id="silent1"/>
+    <rateSynapse id="rs" />
+    
     <simpleRateUnit id="Ecomp"  tau="10ms" r0="0Hz"/>
     <simpleRateUnit id="Icomp"  tau="5ms" r0="5Hz"/>
     
