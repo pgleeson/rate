@@ -6,3 +6,15 @@
 /*.dat
 /report.*.txt
 /LEMS_SimRates.xml
+/temp/*.gv
+/temp/*.png
+/temp/LEMS_*.xml
+/temp/Neuron_2015_Table.csv
+/temp/*.dat
+/temp/*.pov
+/temp/*.pov-state
+/temp/*.net.nml_movie.ini
+/temp/*.mod
+/temp/report.SimExample.txt
+/temp/x86_64
+/temp/*.svg

@@ -1,0 +1,1819 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="TestNetwork">
+    <notes>Generated network</notes>
+    <IF_cond_alpha id="testcell" cm="1." i_offset="0.1" tau_syn_E="2." tau_syn_I="0.5" v_init="-65." tau_m="20." tau_refrac="5." v_reset="-65." v_rest="-65." v_thresh="-50." e_rev_E="-10." e_rev_I="-70."/>
+    <alphaCondSynapse id="ampa" tau_syn="2." e_rev="-10."/>
+    <network id="TestNetwork">
+        <notes>....</notes>
+        <population id="_2" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.746094643409 0.203603667014 0.797716023832"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="313.290707138427763" y="208.146519835070535" z="0.749147005858719"/>
+            </instance>
+        </population>
+        <population id="_24c" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.195574869283 0.522868029673 0.082824987915"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="302.195192489824819" y="307.853799472752826" z="58.222757305894909"/>
+            </instance>
+        </population>
+        <population id="_46d" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.130218242598 0.457415710879 0.325658208169"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="254.312696297597" y="136.787645367416786" z="76.648093279179633"/>
+            </instance>
+        </population>
+        <population id="_7A" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.0555186197755 0.162567156891 0.00936934503219"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="167.361955072623545" y="126.162804345321987" z="78.877271723628354"/>
+            </instance>
+        </population>
+        <population id="_7B" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.40303719315 0.796810110812 0.520132596284"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="189.217793119424613" y="244.656295007833705" z="61.581569510361525"/>
+            </instance>
+        </population>
+        <population id="_9_46v" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.618583958677 0.427284777469 0.486041629091"/>
+            <property tag="region" value="VIS"/>
+            <instance id="0">
+                <location x="14.855463870828755" y="18.309064740993165" z="11.441296968868764"/>
+            </instance>
+        </population>
+        <population id="F1" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.967976337048 0.227546146748 0.567913008701"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="122.923756097381826" y="217.350308120951667" z="96.490156091621571"/>
+            </instance>
+        </population>
+        <population id="F5" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.0230166744503 0.634803121535 0.56723122278"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="132.912456195437215" y="228.217637110226065" z="46.589855900830955"/>
+            </instance>
+        </population>
+        <population id="ProM" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.590364969858 0.698410687117 0.078126832874"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="240.292689912210278" y="137.785765998132462" z="57.900268618736646"/>
+            </instance>
+        </population>
+        <population id="_5" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.0848913592039 0.337207558099 0.552999403861"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="173.917100763889664" y="231.286512111243098" z="64.463423417828267"/>
+            </instance>
+        </population>
+        <population id="_7m" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.346608730698 0.017544985387 0.230405417421"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="216.207274273303682" y="191.047829488596676" z="24.9152121361209"/>
+            </instance>
+        </population>
+        <population id="F2" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.810099361844 0.942473989643 0.795586656045"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="306.703099608469302" y="210.677603895298716" z="53.016120691159031"/>
+            </instance>
+        </population>
+        <population id="F7" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.643055485167 0.714517039075 0.457491873291"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="123.859913261943376" y="221.620385155958445" z="0.578023741774314"/>
+            </instance>
+        </population>
+        <population id="STPi" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.366652741316 0.87731599525 0.937738180259"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="148.753685519119074" y="214.565385069481266" z="37.734744077259641"/>
+            </instance>
+        </population>
+        <population id="_10" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.288923616216 0.851653098204 0.476727383701"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="130.835039729228583" y="237.505701626213863" z="16.400322374196119"/>
+            </instance>
+        </population>
+        <population id="_8B" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.0661873855467 0.476270600094 0.136387124805"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="231.466047488293611" y="148.849144320381669" z="93.730708469622471"/>
+            </instance>
+        </population>
+        <population id="_8l" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.654685784932 0.678880280366 0.939754931057"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="274.19599430395499" y="311.386624469881099" z="14.122776441649954"/>
+            </instance>
+        </population>
+        <population id="_8m" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.736502318387 0.620239190495 0.18970149853"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="181.078541657539716" y="127.917924845592324" z="27.678369479169206"/>
+            </instance>
+        </population>
+        <population id="_9_46d" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.302170228271 0.30323836507 0.0191527037613"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="281.302501023120726" y="155.468607055650807" z="15.457051471078964"/>
+            </instance>
+        </population>
+        <population id="DP" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.376096511928 0.814155921941 0.59183441875"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="310.943731140478974" y="150.910280017808589" z="83.388929415123187"/>
+            </instance>
+        </population>
+        <population id="PBr" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.227789371198 0.412052977914 0.0680110615329"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="128.212561254361503" y="197.236705667165666" z="34.959230196369248"/>
+            </instance>
+        </population>
+        <population id="STPc" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.863617393535 0.470496544653 0.922164954676"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="188.341558550090781" y="283.292611342846044" z="47.593490813172821"/>
+            </instance>
+        </population>
+        <population id="STPr" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.496074208472 0.0666025552609 0.155808158086"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="276.578057904480715" y="214.168025061769015" z="81.73440068581418"/>
+            </instance>
+        </population>
+        <population id="TEpd" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.605443980836 0.389371297789 0.701084810688"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="296.313519731121289" y="207.919279535927927" z="78.106359779248109"/>
+            </instance>
+        </population>
+        <population id="V2" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.963047430335 0.0538332128927 0.563344012307"/>
+            <property tag="region" value="VIS"/>
+            <instance id="0">
+                <location x="81.474116025769732" y="29.567891564250736" z="12.387667430690597"/>
+            </instance>
+        </population>
+        <population id="MT" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.188913284322 0.745481832589 0.115268976324"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="157.124372148997708" y="207.211958719882915" z="11.946740701121195"/>
+            </instance>
+        </population>
+        <population id="TEO" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.230859182674 0.579515688363 0.470503281317"/>
+            <property tag="region" value="OTHER"/>
+            <instance id="0">
+                <location x="225.959828351576618" y="285.884232283488473" z="48.520115298643482"/>
+            </instance>
+        </population>
+        <population id="V1" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.0103784519078 0.994349751159 0.665943844252"/>
+            <property tag="region" value="VIS"/>
+            <instance id="0">
+                <location x="81.773400170180395" y="65.639162253941834" z="64.104303115169046"/>
+            </instance>
+        </population>
+        <population id="V4" component="testcell" size="1" type="populationList">
+            <property tag="color" value="0.766109903761 0.0823959133614 0.853455253287"/>
+            <property tag="region" value="VIS"/>
+            <instance id="0">
+                <location x="34.53489252042602" y="70.265894904832479" z="80.994058373120282"/>
+            </instance>
+        </population>
+        <projection id="proj__24c__2" presynapticPopulation="_24c" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_2/0/testcell" weight="0.000245459" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__2" presynapticPopulation="_46d" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_2/0/testcell" weight="0.0000117" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__2" presynapticPopulation="_7A" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_2/0/testcell" weight="0.00000584" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__2" presynapticPopulation="_7B" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_2/0/testcell" weight="0.0020688688" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__2" presynapticPopulation="_9_46v" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_2/0/testcell" weight="0.0108294177" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__2" presynapticPopulation="F1" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_2/0/testcell" weight="0.0004441639" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__2" presynapticPopulation="F5" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_2/0/testcell" weight="0.1501040279" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__2" presynapticPopulation="ProM" postsynapticPopulation="_2" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_2/0/testcell" weight="0.0441884658" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__5" presynapticPopulation="_2" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_5/0/testcell" weight="0.0363453752" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__5" presynapticPopulation="_46d" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_5/0/testcell" weight="0.000188318" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__5" presynapticPopulation="_7A" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_5/0/testcell" weight="0.1505602461" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__5" presynapticPopulation="_7B" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_5/0/testcell" weight="0.0113932394" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__5" presynapticPopulation="_7m" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_5/0/testcell" weight="0.0018204074" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__5" presynapticPopulation="F1" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_5/0/testcell" weight="0.336869527" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__5" presynapticPopulation="F2" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_5/0/testcell" weight="0.1175732086" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__5" presynapticPopulation="F5" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_5/0/testcell" weight="0.0068422209" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__5" presynapticPopulation="F7" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_5/0/testcell" weight="0.0003138633" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__5" presynapticPopulation="STPi" postsynapticPopulation="_5" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_5/0/testcell" weight="0.0020087254" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__10" presynapticPopulation="_24c" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_10/0/testcell" weight="0.0064323396" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__10" presynapticPopulation="_46d" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_10/0/testcell" weight="0.1868511253" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__10" presynapticPopulation="_7A" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_10/0/testcell" weight="0.0001678391" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__10" presynapticPopulation="_8B" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_10/0/testcell" weight="0.0186489392" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__10" presynapticPopulation="_8l" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_10/0/testcell" weight="0.0004384839" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__10" presynapticPopulation="_8m" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_10/0/testcell" weight="0.0057168831" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__10" presynapticPopulation="_9_46d" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_10/0/testcell" weight="0.0112344499" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__10" presynapticPopulation="_9_46v" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_10/0/testcell" weight="0.0000233" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__10" presynapticPopulation="DP" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_10/0/testcell" weight="0.0001123875" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__10" presynapticPopulation="F1" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_10/0/testcell" weight="0.00000156" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__10" presynapticPopulation="F2" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_10/0/testcell" weight="0.0000651" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__10" presynapticPopulation="F5" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_10/0/testcell" weight="0.0000112" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__10" presynapticPopulation="F7" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_10/0/testcell" weight="0.0020211008" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__10" presynapticPopulation="PBr" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_10/0/testcell" weight="0.0262999378" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__10" presynapticPopulation="STPc" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_10/0/testcell" weight="0.0046569331" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__10" presynapticPopulation="STPi" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_10/0/testcell" weight="0.0205269605" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__10" presynapticPopulation="STPr" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_10/0/testcell" weight="0.0347884655" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__10" presynapticPopulation="TEpd" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_10/0/testcell" weight="0.00000911" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__10" presynapticPopulation="V2" postsynapticPopulation="_10" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_10/0/testcell" weight="0.00000723" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__24c" presynapticPopulation="_2" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_24c/0/testcell" weight="0.0022430217" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__24c" presynapticPopulation="_5" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_24c/0/testcell" weight="0.0255732167" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__24c" presynapticPopulation="_10" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_24c/0/testcell" weight="0.0001523039" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__24c" presynapticPopulation="_46d" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_24c/0/testcell" weight="0.0004846035" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__24c" presynapticPopulation="_7A" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_24c/0/testcell" weight="0.0079613425" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__24c" presynapticPopulation="_7B" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_24c/0/testcell" weight="0.0043198937" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__24c" presynapticPopulation="_7m" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_24c/0/testcell" weight="0.0195225964" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__24c" presynapticPopulation="_8B" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_24c/0/testcell" weight="0.0428666371" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__24c" presynapticPopulation="_8l" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_24c/0/testcell" weight="0.0000831" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__24c" presynapticPopulation="_8m" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_24c/0/testcell" weight="0.0000277" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__24c" presynapticPopulation="_9_46d" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_24c/0/testcell" weight="0.005109105" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__24c" presynapticPopulation="_9_46v" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_24c/0/testcell" weight="0.0007476739" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__24c" presynapticPopulation="F1" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_24c/0/testcell" weight="0.0111735711" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__24c" presynapticPopulation="F2" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_24c/0/testcell" weight="0.0491110988" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__24c" presynapticPopulation="F5" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_24c/0/testcell" weight="0.0221256092" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__24c" presynapticPopulation="F7" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_24c/0/testcell" weight="0.0804718653" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__24c" presynapticPopulation="ProM" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_24c/0/testcell" weight="0.0022014843" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__24c" presynapticPopulation="STPc" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_24c/0/testcell" weight="0.0001523039" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__24c" presynapticPopulation="STPi" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_24c/0/testcell" weight="0.0000415" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__24c" presynapticPopulation="STPr" postsynapticPopulation="_24c" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_24c/0/testcell" weight="0.0000277" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__46d" presynapticPopulation="_2" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000167" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__46d" presynapticPopulation="_10" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_46d/0/testcell" weight="0.0765214335" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__46d" presynapticPopulation="_24c" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_46d/0/testcell" weight="0.0030960011" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__46d" presynapticPopulation="_7A" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_46d/0/testcell" weight="0.0005187894" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__46d" presynapticPopulation="_7m" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_46d/0/testcell" weight="0.0007530814" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__46d" presynapticPopulation="_8B" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_46d/0/testcell" weight="0.0389761441" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__46d" presynapticPopulation="_8l" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000669" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__46d" presynapticPopulation="_8m" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_46d/0/testcell" weight="0.0366332243" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__46d" presynapticPopulation="_9_46d" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_46d/0/testcell" weight="0.5959383812" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__46d" presynapticPopulation="_9_46v" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_46d/0/testcell" weight="0.000117146" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__46d" presynapticPopulation="DP" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_46d/0/testcell" weight="0.0002593947" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__46d" presynapticPopulation="F1" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000669" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__46d" presynapticPopulation="F2" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_46d/0/testcell" weight="0.0001338811" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__46d" presynapticPopulation="F5" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000502" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__46d" presynapticPopulation="F7" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_46d/0/testcell" weight="0.0074304027" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__46d" presynapticPopulation="MT" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000167" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__46d" presynapticPopulation="PBr" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_46d/0/testcell" weight="0.000468584" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__46d" presynapticPopulation="STPc" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_46d/0/testcell" weight="0.0044724665" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__46d" presynapticPopulation="STPi" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_46d/0/testcell" weight="0.0133169887" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__46d" presynapticPopulation="STPr" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_46d/0/testcell" weight="0.0005857299" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO__46d" presynapticPopulation="TEO" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000167" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__46d" presynapticPopulation="TEpd" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_46d/0/testcell" weight="0.0000669" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__46d" presynapticPopulation="V2" postsynapticPopulation="_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_46d/0/testcell" weight="0.0022592441" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__7A" presynapticPopulation="_2" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_7A/0/testcell" weight="0.0000183" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__7A" presynapticPopulation="_5" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_7A/0/testcell" weight="0.0100253146" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__7A" presynapticPopulation="_46d" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_7A/0/testcell" weight="0.0148140702" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__7A" presynapticPopulation="_7B" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_7A/0/testcell" weight="0.00047522" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__7A" presynapticPopulation="_7m" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_7A/0/testcell" weight="0.021613372" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__7A" presynapticPopulation="_8B" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_7A/0/testcell" weight="0.0074481599" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__7A" presynapticPopulation="_8l" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_7A/0/testcell" weight="0.0004660812" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__7A" presynapticPopulation="_8m" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_7A/0/testcell" weight="0.0005391919" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__7A" presynapticPopulation="_9_46d" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_7A/0/testcell" weight="0.0029518474" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__7A" presynapticPopulation="_9_46v" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_7A/0/testcell" weight="0.0038200378" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__7A" presynapticPopulation="DP" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_7A/0/testcell" weight="0.0207634592" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__7A" presynapticPopulation="F1" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_7A/0/testcell" weight="0.0001096662" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__7A" presynapticPopulation="F2" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_7A/0/testcell" weight="0.0071008837" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__7A" presynapticPopulation="F5" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_7A/0/testcell" weight="0.0013251327" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__7A" presynapticPopulation="F7" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_7A/0/testcell" weight="0.0001553604" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__7A" presynapticPopulation="MT" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_7A/0/testcell" weight="0.0000548" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__7A" presynapticPopulation="STPc" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_7A/0/testcell" weight="0.013635159" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__7A" presynapticPopulation="STPi" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_7A/0/testcell" weight="0.04167314" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__7A" presynapticPopulation="STPr" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_7A/0/testcell" weight="0.0025223216" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO__7A" presynapticPopulation="TEO" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../_7A/0/testcell" weight="0.0021384901" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__7A" presynapticPopulation="TEpd" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_7A/0/testcell" weight="0.002796487" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1__7A" presynapticPopulation="V1" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../_7A/0/testcell" weight="0.0000183" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__7A" presynapticPopulation="V2" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_7A/0/testcell" weight="0.0000366" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4__7A" presynapticPopulation="V4" postsynapticPopulation="_7A" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../_7A/0/testcell" weight="0.0030432359" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__7B" presynapticPopulation="_2" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_7B/0/testcell" weight="0.0030754955" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__7B" presynapticPopulation="_5" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_7B/0/testcell" weight="0.0217935971" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__7B" presynapticPopulation="_24c" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_7B/0/testcell" weight="0.0000398" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__7B" presynapticPopulation="_7A" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_7B/0/testcell" weight="0.3972691721" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__7B" presynapticPopulation="_7m" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_7B/0/testcell" weight="0.0186253066" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__7B" presynapticPopulation="_8m" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_7B/0/testcell" weight="0.0001855902" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__7B" presynapticPopulation="_9_46d" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_7B/0/testcell" weight="0.0002518725" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__7B" presynapticPopulation="_9_46v" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_7B/0/testcell" weight="0.0126996752" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__7B" presynapticPopulation="F1" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_7B/0/testcell" weight="0.0009412077" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__7B" presynapticPopulation="F2" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_7B/0/testcell" weight="0.0029296746" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__7B" presynapticPopulation="F5" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_7B/0/testcell" weight="0.0366275602" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__7B" presynapticPopulation="MT" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_7B/0/testcell" weight="0.0016968251" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__7B" presynapticPopulation="ProM" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_7B/0/testcell" weight="0.0006628223" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__7B" presynapticPopulation="STPc" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_7B/0/testcell" weight="0.0098893087" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__7B" presynapticPopulation="STPi" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_7B/0/testcell" weight="0.0000795" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__7B" presynapticPopulation="STPr" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_7B/0/testcell" weight="0.0001590774" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__7B" presynapticPopulation="V2" postsynapticPopulation="_7B" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_7B/0/testcell" weight="0.0000398" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__7m" presynapticPopulation="_2" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_7m/0/testcell" weight="0.0000119" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__7m" presynapticPopulation="_5" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_7m/0/testcell" weight="0.0071104865" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__7m" presynapticPopulation="_24c" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_7m/0/testcell" weight="0.0016495852" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__7m" presynapticPopulation="_46d" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_7m/0/testcell" weight="0.0042936857" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__7m" presynapticPopulation="_7A" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_7m/0/testcell" weight="0.0784803568" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__7m" presynapticPopulation="_7B" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_7m/0/testcell" weight="0.00000596" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__7m" presynapticPopulation="_8B" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_7m/0/testcell" weight="0.0383990091" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__7m" presynapticPopulation="_8l" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_7m/0/testcell" weight="0.0005776526" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__7m" presynapticPopulation="_8m" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_7m/0/testcell" weight="0.0185742105" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__7m" presynapticPopulation="_9_46d" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_7m/0/testcell" weight="0.0215815771" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__7m" presynapticPopulation="_9_46v" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_7m/0/testcell" weight="0.0012386777" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__7m" presynapticPopulation="DP" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_7m/0/testcell" weight="0.0134289338" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__7m" presynapticPopulation="F1" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_7m/0/testcell" weight="0.0003066918" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__7m" presynapticPopulation="F2" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_7m/0/testcell" weight="0.0316934749" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__7m" presynapticPopulation="F5" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_7m/0/testcell" weight="0.0000298" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__7m" presynapticPopulation="F7" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_7m/0/testcell" weight="0.0134140459" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__7m" presynapticPopulation="MT" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_7m/0/testcell" weight="0.0009141203" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__7m" presynapticPopulation="PBr" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_7m/0/testcell" weight="0.00000596" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__7m" presynapticPopulation="STPc" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_7m/0/testcell" weight="0.0116751329" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__7m" presynapticPopulation="STPi" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_7m/0/testcell" weight="0.0000893" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__7m" presynapticPopulation="STPr" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_7m/0/testcell" weight="0.0000596" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__7m" presynapticPopulation="TEpd" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_7m/0/testcell" weight="0.00000596" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1__7m" presynapticPopulation="V1" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../_7m/0/testcell" weight="0.0000268" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__7m" presynapticPopulation="V2" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_7m/0/testcell" weight="0.0014500866" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4__7m" presynapticPopulation="V4" postsynapticPopulation="_7m" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../_7m/0/testcell" weight="0.0003662437" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__8B" presynapticPopulation="_10" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_8B/0/testcell" weight="0.1319701812" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__8B" presynapticPopulation="_24c" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_8B/0/testcell" weight="0.0937073693" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__8B" presynapticPopulation="_46d" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_8B/0/testcell" weight="0.039959345" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__8B" presynapticPopulation="_7A" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_8B/0/testcell" weight="0.0008888442" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__8B" presynapticPopulation="_7m" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_8B/0/testcell" weight="0.0026510745" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__8B" presynapticPopulation="_8l" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_8B/0/testcell" weight="0.0009352187" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__8B" presynapticPopulation="_8m" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_8B/0/testcell" weight="0.0490951179" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__8B" presynapticPopulation="_9_46d" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_8B/0/testcell" weight="0.0869985276" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__8B" presynapticPopulation="_9_46v" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_8B/0/testcell" weight="0.0001468525" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__8B" presynapticPopulation="DP" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_8B/0/testcell" weight="0.0001043426" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__8B" presynapticPopulation="F1" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_8B/0/testcell" weight="0.00000773" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__8B" presynapticPopulation="F2" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_8B/0/testcell" weight="0.000085" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__8B" presynapticPopulation="F5" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_8B/0/testcell" weight="0.00000773" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__8B" presynapticPopulation="F7" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_8B/0/testcell" weight="0.1512271847" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__8B" presynapticPopulation="PBr" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_8B/0/testcell" weight="0.0003516732" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__8B" presynapticPopulation="STPc" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_8B/0/testcell" weight="0.0000541" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__8B" presynapticPopulation="STPi" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_8B/0/testcell" weight="0.0143760893" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__8B" presynapticPopulation="STPr" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_8B/0/testcell" weight="0.0191372028" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4__8B" presynapticPopulation="V4" postsynapticPopulation="_8B" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../_8B/0/testcell" weight="0.00000773" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__8l" presynapticPopulation="_2" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_8l/0/testcell" weight="0.0002041712" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__8l" presynapticPopulation="_5" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_8l/0/testcell" weight="0.0000613" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__8l" presynapticPopulation="_10" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_8l/0/testcell" weight="0.0005308452" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__8l" presynapticPopulation="_24c" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_8l/0/testcell" weight="0.0024296375" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__8l" presynapticPopulation="_46d" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_8l/0/testcell" weight="0.038966077" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__8l" presynapticPopulation="_7A" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_8l/0/testcell" weight="0.0017558725" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__8l" presynapticPopulation="_7B" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_8l/0/testcell" weight="0.0000306" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__8l" presynapticPopulation="_7m" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_8l/0/testcell" weight="0.0001225027" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__8l" presynapticPopulation="_8B" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_8l/0/testcell" weight="0.0206110845" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__8l" presynapticPopulation="_8m" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_8l/0/testcell" weight="0.4154169687" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__8l" presynapticPopulation="_9_46d" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_8l/0/testcell" weight="0.0101473095" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__8l" presynapticPopulation="_9_46v" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_8l/0/testcell" weight="0.0247455516" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__8l" presynapticPopulation="DP" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_8l/0/testcell" weight="0.0006023051" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__8l" presynapticPopulation="F1" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_8l/0/testcell" weight="0.0014087814" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__8l" presynapticPopulation="F2" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_8l/0/testcell" weight="0.0189879233" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__8l" presynapticPopulation="F5" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_8l/0/testcell" weight="0.0126586155" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__8l" presynapticPopulation="F7" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_8l/0/testcell" weight="0.0260726645" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__8l" presynapticPopulation="MT" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_8l/0/testcell" weight="0.0213461008" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__8l" presynapticPopulation="PBr" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_8l/0/testcell" weight="0.000837102" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__8l" presynapticPopulation="ProM" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_8l/0/testcell" weight="0.0017456639" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__8l" presynapticPopulation="STPc" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_8l/0/testcell" weight="0.0115356738" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__8l" presynapticPopulation="STPi" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_8l/0/testcell" weight="0.0058699225" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__8l" presynapticPopulation="STPr" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_8l/0/testcell" weight="0.0011229417" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO__8l" presynapticPopulation="TEO" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../_8l/0/testcell" weight="0.0014700328" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__8l" presynapticPopulation="TEpd" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_8l/0/testcell" weight="0.0001531284" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1__8l" presynapticPopulation="V1" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../_8l/0/testcell" weight="0.0000817" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__8l" presynapticPopulation="V2" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_8l/0/testcell" weight="0.0035729963" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4__8l" presynapticPopulation="V4" postsynapticPopulation="_8l" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../_8l/0/testcell" weight="0.0127811182" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__8m" presynapticPopulation="_2" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_8m/0/testcell" weight="0.0000485" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__8m" presynapticPopulation="_5" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_8m/0/testcell" weight="0.000085" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__8m" presynapticPopulation="_10" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_8m/0/testcell" weight="0.0020876067" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__8m" presynapticPopulation="_24c" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_8m/0/testcell" weight="0.0023667634" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__8m" presynapticPopulation="_46d" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_8m/0/testcell" weight="0.1107159763" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__8m" presynapticPopulation="_7A" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_8m/0/testcell" weight="0.0016021167" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__8m" presynapticPopulation="_7B" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_8m/0/testcell" weight="0.0007282349" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__8m" presynapticPopulation="_7m" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_8m/0/testcell" weight="0.0005461762" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__8m" presynapticPopulation="_8B" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_8m/0/testcell" weight="0.0172106177" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__8m" presynapticPopulation="_8l" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_8m/0/testcell" weight="0.1836001505" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__8m" presynapticPopulation="_9_46d" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_8m/0/testcell" weight="0.0374069983" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__8m" presynapticPopulation="_9_46v" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_8m/0/testcell" weight="0.0916847714" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__8m" presynapticPopulation="DP" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_8m/0/testcell" weight="0.0002063332" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__8m" presynapticPopulation="F1" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_8m/0/testcell" weight="0.0008253329" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__8m" presynapticPopulation="F2" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_8m/0/testcell" weight="0.0215800269" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__8m" presynapticPopulation="F5" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_8m/0/testcell" weight="0.0146860701" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__8m" presynapticPopulation="F7" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_8m/0/testcell" weight="0.1063829787" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__8m" presynapticPopulation="MT" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_8m/0/testcell" weight="0.0006918231" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__8m" presynapticPopulation="PBr" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_8m/0/testcell" weight="0.0011773131" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__8m" presynapticPopulation="ProM" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_8m/0/testcell" weight="0.0005825879" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__8m" presynapticPopulation="STPc" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_8m/0/testcell" weight="0.033668726" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__8m" presynapticPopulation="STPi" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_8m/0/testcell" weight="0.0139942469" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__8m" presynapticPopulation="STPr" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_8m/0/testcell" weight="0.0014321953" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__8m" presynapticPopulation="TEpd" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_8m/0/testcell" weight="0.0000364" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__8m" presynapticPopulation="V2" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_8m/0/testcell" weight="0.0001213725" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4__8m" presynapticPopulation="V4" postsynapticPopulation="_8m" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../_8m/0/testcell" weight="0.0001092352" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__9_46d" presynapticPopulation="_2" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0000466" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__9_46d" presynapticPopulation="_5" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0009706627" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__9_46d" presynapticPopulation="_10" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0078856637" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__9_46d" presynapticPopulation="_24c" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0030362329" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__9_46d" presynapticPopulation="_46d" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.195724425" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__9_46d" presynapticPopulation="_7A" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0007299383" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__9_46d" presynapticPopulation="_7B" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0011104381" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__9_46d" presynapticPopulation="_7m" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0346953672" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__9_46d" presynapticPopulation="_8B" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.070974856" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__9_46d" presynapticPopulation="_8l" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0147035984" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__9_46d" presynapticPopulation="_8m" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.2215324046" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v__9_46d" presynapticPopulation="_9_46v" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0168351737" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP__9_46d" presynapticPopulation="DP" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0000466" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__9_46d" presynapticPopulation="F1" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0000544" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__9_46d" presynapticPopulation="F2" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0218632064" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__9_46d" presynapticPopulation="F5" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0006367547" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__9_46d" presynapticPopulation="F7" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0559295842" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT__9_46d" presynapticPopulation="MT" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0002251937" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__9_46d" presynapticPopulation="PBr" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0005358058" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__9_46d" presynapticPopulation="ProM" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0003300253" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__9_46d" presynapticPopulation="STPc" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0256216124" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__9_46d" presynapticPopulation="STPi" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0064917921" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__9_46d" presynapticPopulation="STPr" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0001514234" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO__9_46d" presynapticPopulation="TEO" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.00000777" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2__9_46d" presynapticPopulation="V2" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0018131979" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4__9_46d" presynapticPopulation="V4" postsynapticPopulation="_9_46d" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../_9_46d/0/testcell" weight="0.0000854" delay="0ms"/>
+        </projection>
+        <projection id="proj__2__9_46v" presynapticPopulation="_2" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0017825878" delay="0ms"/>
+        </projection>
+        <projection id="proj__5__9_46v" presynapticPopulation="_5" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0000692" delay="0ms"/>
+        </projection>
+        <projection id="proj__10__9_46v" presynapticPopulation="_10" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0002365246" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c__9_46v" presynapticPopulation="_24c" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0065996129" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d__9_46v" presynapticPopulation="_46d" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0373247338" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A__9_46v" presynapticPopulation="_7A" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0219737112" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B__9_46v" presynapticPopulation="_7B" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0196690386" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m__9_46v" presynapticPopulation="_7m" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0007672627" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B__9_46v" presynapticPopulation="_8B" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0163951922" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l__9_46v" presynapticPopulation="_8l" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.002999824" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m__9_46v" presynapticPopulation="_8m" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0339557007" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d__9_46v" presynapticPopulation="_9_46d" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0142549331" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1__9_46v" presynapticPopulation="F1" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0000577" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2__9_46v" presynapticPopulation="F2" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0050997009" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5__9_46v" presynapticPopulation="F5" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0172836016" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7__9_46v" presynapticPopulation="F7" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0092648412" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr__9_46v" presynapticPopulation="PBr" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0000115" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM__9_46v" presynapticPopulation="ProM" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0089879344" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc__9_46v" presynapticPopulation="STPc" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0009749428" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi__9_46v" presynapticPopulation="STPi" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0007038049" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr__9_46v" presynapticPopulation="STPr" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0002624846" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd__9_46v" presynapticPopulation="TEpd" postsynapticPopulation="_9_46v" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../_9_46v/0/testcell" weight="0.0001038401" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_DP" presynapticPopulation="_24c" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../DP/0/testcell" weight="0.0000278" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_DP" presynapticPopulation="_46d" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../DP/0/testcell" weight="0.00075523" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_DP" presynapticPopulation="_7A" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../DP/0/testcell" weight="0.1179748707" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_DP" presynapticPopulation="_7m" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../DP/0/testcell" weight="0.0002345188" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_DP" presynapticPopulation="_8B" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../DP/0/testcell" weight="0.0011248952" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_DP" presynapticPopulation="_8m" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../DP/0/testcell" weight="0.0019317988" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_DP" presynapticPopulation="_9_46d" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../DP/0/testcell" weight="0.0007830542" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_DP" presynapticPopulation="F2" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../DP/0/testcell" weight="0.0015382842" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_DP" presynapticPopulation="F5" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../DP/0/testcell" weight="0.0000159" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_DP" presynapticPopulation="F7" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../DP/0/testcell" weight="0.0006479078" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_DP" presynapticPopulation="MT" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../DP/0/testcell" weight="0.1624221418" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_DP" presynapticPopulation="STPc" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../DP/0/testcell" weight="0.000337866" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_DP" presynapticPopulation="STPi" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../DP/0/testcell" weight="0.0000477" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_DP" presynapticPopulation="STPr" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../DP/0/testcell" weight="0.00000795" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_DP" presynapticPopulation="TEO" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../DP/0/testcell" weight="0.000337866" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_DP" presynapticPopulation="TEpd" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../DP/0/testcell" weight="0.0012163177" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1_DP" presynapticPopulation="V1" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../DP/0/testcell" weight="0.0000119" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_DP" presynapticPopulation="V2" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../DP/0/testcell" weight="0.0790248789" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_DP" presynapticPopulation="V4" postsynapticPopulation="DP" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../DP/0/testcell" weight="0.33760767" delay="0ms"/>
+        </projection>
+        <projection id="proj__2_F1" presynapticPopulation="_2" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../F1/0/testcell" weight="0.1254656568" delay="0ms"/>
+        </projection>
+        <projection id="proj__5_F1" presynapticPopulation="_5" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../F1/0/testcell" weight="0.1089777498" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_F1" presynapticPopulation="_24c" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../F1/0/testcell" weight="0.0043217449" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_F1" presynapticPopulation="_7A" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../F1/0/testcell" weight="0.0003601454" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_F1" presynapticPopulation="_8B" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../F1/0/testcell" weight="0.0003601454" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_F1" presynapticPopulation="_8m" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../F1/0/testcell" weight="0.000045" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_F1" presynapticPopulation="F2" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../F1/0/testcell" weight="0.4020460761" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_F1" presynapticPopulation="F5" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../F1/0/testcell" weight="0.0090036352" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_F1" presynapticPopulation="F7" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../F1/0/testcell" weight="0.0033425996" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_F1" presynapticPopulation="ProM" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../F1/0/testcell" weight="0.0003601454" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_F1" presynapticPopulation="STPc" postsynapticPopulation="F1" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../F1/0/testcell" weight="0.00009" delay="0ms"/>
+        </projection>
+        <projection id="proj__5_F2" presynapticPopulation="_5" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../F2/0/testcell" weight="0.0187627441" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_F2" presynapticPopulation="_24c" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../F2/0/testcell" weight="0.0312420692" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_F2" presynapticPopulation="_7A" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../F2/0/testcell" weight="0.0083399697" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B_F2" presynapticPopulation="_7B" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../F2/0/testcell" weight="0.0000525" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_F2" presynapticPopulation="_7m" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../F2/0/testcell" weight="0.007473593" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_F2" presynapticPopulation="_8B" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../F2/0/testcell" weight="0.0001400205" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_F2" presynapticPopulation="_8l" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../F2/0/testcell" weight="0.0000175" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_F2" presynapticPopulation="_8m" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../F2/0/testcell" weight="0.0002362846" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_F2" presynapticPopulation="_9_46d" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../F2/0/testcell" weight="0.0001662743" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_F2" presynapticPopulation="_9_46v" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../F2/0/testcell" weight="0.0002537871" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1_F2" presynapticPopulation="F1" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../F2/0/testcell" weight="0.1627563031" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_F2" presynapticPopulation="F5" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../F2/0/testcell" weight="0.0415423256" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_F2" presynapticPopulation="F7" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../F2/0/testcell" weight="0.0245123349" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_F2" presynapticPopulation="MT" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../F2/0/testcell" weight="0.00000875" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_F2" presynapticPopulation="PBr" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../F2/0/testcell" weight="0.0000613" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_F2" presynapticPopulation="ProM" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../F2/0/testcell" weight="0.0000788" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_F2" presynapticPopulation="STPc" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../F2/0/testcell" weight="0.000376305" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_F2" presynapticPopulation="STPi" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../F2/0/testcell" weight="0.0004463153" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_F2" presynapticPopulation="STPr" postsynapticPopulation="F2" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../F2/0/testcell" weight="0.0000438" delay="0ms"/>
+        </projection>
+        <projection id="proj__2_F5" presynapticPopulation="_2" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../F5/0/testcell" weight="0.1987097699" delay="0ms"/>
+        </projection>
+        <projection id="proj__5_F5" presynapticPopulation="_5" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../F5/0/testcell" weight="0.0000956" delay="0ms"/>
+        </projection>
+        <projection id="proj__10_F5" presynapticPopulation="_10" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../F5/0/testcell" weight="0.0000908" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_F5" presynapticPopulation="_24c" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../F5/0/testcell" weight="0.0082813657" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_F5" presynapticPopulation="_46d" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../F5/0/testcell" weight="0.0000956" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_F5" presynapticPopulation="_7A" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../F5/0/testcell" weight="0.0000717" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B_F5" presynapticPopulation="_7B" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../F5/0/testcell" weight="0.0756361551" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_F5" presynapticPopulation="_7m" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../F5/0/testcell" weight="0.00000478" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_F5" presynapticPopulation="_8B" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../F5/0/testcell" weight="0.000043" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_F5" presynapticPopulation="_8l" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../F5/0/testcell" weight="0.0008219244" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_F5" presynapticPopulation="_8m" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../F5/0/testcell" weight="0.0000287" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_F5" presynapticPopulation="_9_46d" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../F5/0/testcell" weight="0.0000335" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_F5" presynapticPopulation="_9_46v" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../F5/0/testcell" weight="0.0027954985" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1_F5" presynapticPopulation="F1" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../F5/0/testcell" weight="0.0041669653" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_F5" presynapticPopulation="F2" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../F5/0/testcell" weight="0.0011038635" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_F5" presynapticPopulation="F7" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../F5/0/testcell" weight="0.0000382" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_F5" presynapticPopulation="PBr" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../F5/0/testcell" weight="0.0000382" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_F5" presynapticPopulation="ProM" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../F5/0/testcell" weight="0.0443695792" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_F5" presynapticPopulation="STPc" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../F5/0/testcell" weight="0.00000478" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_F5" presynapticPopulation="STPi" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../F5/0/testcell" weight="0.0000191" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_F5" presynapticPopulation="STPr" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../F5/0/testcell" weight="0.0000382" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_F5" presynapticPopulation="TEpd" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../F5/0/testcell" weight="0.0000287" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1_F5" presynapticPopulation="V1" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../F5/0/testcell" weight="0.0000526" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_F5" presynapticPopulation="V2" postsynapticPopulation="F5" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../F5/0/testcell" weight="0.0000335" delay="0ms"/>
+        </projection>
+        <projection id="proj__5_F7" presynapticPopulation="_5" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../F7/0/testcell" weight="0.0000451" delay="0ms"/>
+        </projection>
+        <projection id="proj__10_F7" presynapticPopulation="_10" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../F7/0/testcell" weight="0.0014894721" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_F7" presynapticPopulation="_24c" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../F7/0/testcell" weight="0.093543364" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_F7" presynapticPopulation="_46d" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../F7/0/testcell" weight="0.0009027104" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_F7" presynapticPopulation="_7A" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../F7/0/testcell" weight="0.0021890727" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B_F7" presynapticPopulation="_7B" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../F7/0/testcell" weight="0.0000564" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_F7" presynapticPopulation="_7m" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../F7/0/testcell" weight="0.0056193722" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_F7" presynapticPopulation="_8B" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../F7/0/testcell" weight="0.1037665591" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_F7" presynapticPopulation="_8l" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../F7/0/testcell" weight="0.0031256347" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_F7" presynapticPopulation="_8m" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../F7/0/testcell" weight="0.036909571" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_F7" presynapticPopulation="_9_46d" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../F7/0/testcell" weight="0.025072781" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_F7" presynapticPopulation="_9_46v" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../F7/0/testcell" weight="0.0037800997" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1_F7" presynapticPopulation="F1" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../F7/0/testcell" weight="0.0003159486" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_F7" presynapticPopulation="F2" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../F7/0/testcell" weight="0.0989596263" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_F7" presynapticPopulation="F5" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../F7/0/testcell" weight="0.0020310984" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_F7" presynapticPopulation="PBr" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../F7/0/testcell" weight="0.0025501568" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_F7" presynapticPopulation="ProM" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../F7/0/testcell" weight="0.0001805421" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_F7" presynapticPopulation="STPc" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../F7/0/testcell" weight="0.0018392724" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_F7" presynapticPopulation="STPi" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../F7/0/testcell" weight="0.0116336801" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_F7" presynapticPopulation="STPr" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../F7/0/testcell" weight="0.0065672181" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_F7" presynapticPopulation="TEO" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../F7/0/testcell" weight="0.0000451" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_F7" presynapticPopulation="V2" postsynapticPopulation="F7" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../F7/0/testcell" weight="0.0000903" delay="0ms"/>
+        </projection>
+        <projection id="proj__2_MT" presynapticPopulation="_2" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../MT/0/testcell" weight="0.0000238" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_MT" presynapticPopulation="_7A" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../MT/0/testcell" weight="0.000452641" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_MT" presynapticPopulation="_8l" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../MT/0/testcell" weight="0.0022751164" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_MT" presynapticPopulation="_8m" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../MT/0/testcell" weight="0.0006283371" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_MT" presynapticPopulation="_9_46d" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../MT/0/testcell" weight="0.00000596" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_MT" presynapticPopulation="_9_46v" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../MT/0/testcell" weight="0.0000387" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_MT" presynapticPopulation="DP" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../MT/0/testcell" weight="0.0146453171" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1_MT" presynapticPopulation="F1" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../MT/0/testcell" weight="0.00000298" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_MT" presynapticPopulation="F2" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../MT/0/testcell" weight="0.00000596" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_MT" presynapticPopulation="F5" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../MT/0/testcell" weight="0.00000298" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_MT" presynapticPopulation="PBr" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../MT/0/testcell" weight="0.0000179" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_MT" presynapticPopulation="ProM" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../MT/0/testcell" weight="0.00000298" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_MT" presynapticPopulation="STPc" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../MT/0/testcell" weight="0.0017807848" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_MT" presynapticPopulation="STPi" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../MT/0/testcell" weight="0.0002173868" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_MT" presynapticPopulation="STPr" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../MT/0/testcell" weight="0.0002426989" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_MT" presynapticPopulation="TEO" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../MT/0/testcell" weight="0.038200514" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_MT" presynapticPopulation="TEpd" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../MT/0/testcell" weight="0.0135524274" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1_MT" presynapticPopulation="V1" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../MT/0/testcell" weight="0.0189945415" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_MT" presynapticPopulation="V2" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../MT/0/testcell" weight="0.1194629653" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_MT" presynapticPopulation="V4" postsynapticPopulation="MT" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../MT/0/testcell" weight="0.3809271397" delay="0ms"/>
+        </projection>
+        <projection id="proj__10_PBr" presynapticPopulation="_10" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../PBr/0/testcell" weight="0.0088722353" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_PBr" presynapticPopulation="_24c" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../PBr/0/testcell" weight="0.0001110453" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_PBr" presynapticPopulation="_46d" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../PBr/0/testcell" weight="0.0041969431" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_PBr" presynapticPopulation="_7A" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../PBr/0/testcell" weight="0.0000228" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_PBr" presynapticPopulation="_7m" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../PBr/0/testcell" weight="0.000216396" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_PBr" presynapticPopulation="_8B" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../PBr/0/testcell" weight="0.0009253776" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_PBr" presynapticPopulation="_8l" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../PBr/0/testcell" weight="0.00000285" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_PBr" presynapticPopulation="_8m" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../PBr/0/testcell" weight="0.0004441812" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_PBr" presynapticPopulation="_9_46d" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../PBr/0/testcell" weight="0.0041229129" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_PBr" presynapticPopulation="DP" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../PBr/0/testcell" weight="0.0000569" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_PBr" presynapticPopulation="F7" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../PBr/0/testcell" weight="0.0001338238" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_PBr" presynapticPopulation="ProM" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../PBr/0/testcell" weight="0.00000854" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_PBr" presynapticPopulation="STPc" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../PBr/0/testcell" weight="0.052894581" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_PBr" presynapticPopulation="STPi" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../PBr/0/testcell" weight="0.2842275802" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_PBr" presynapticPopulation="STPr" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../PBr/0/testcell" weight="0.0678002779" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_PBr" presynapticPopulation="V2" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../PBr/0/testcell" weight="0.0000114" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_PBr" presynapticPopulation="V4" postsynapticPopulation="PBr" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../PBr/0/testcell" weight="0.0000228" delay="0ms"/>
+        </projection>
+        <projection id="proj__2_ProM" presynapticPopulation="_2" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../ProM/0/testcell" weight="0.0275174124" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_ProM" presynapticPopulation="_24c" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../ProM/0/testcell" weight="0.0024634215" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_ProM" presynapticPopulation="_46d" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../ProM/0/testcell" weight="0.000011" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_ProM" presynapticPopulation="_7A" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../ProM/0/testcell" weight="0.0000166" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B_ProM" presynapticPopulation="_7B" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../ProM/0/testcell" weight="0.0011101967" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_ProM" presynapticPopulation="_9_46v" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../ProM/0/testcell" weight="0.0180779789" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1_ProM" presynapticPopulation="F1" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../ProM/0/testcell" weight="0.0000663" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_ProM" presynapticPopulation="F2" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../ProM/0/testcell" weight="0.000011" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_ProM" presynapticPopulation="F5" postsynapticPopulation="ProM" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../ProM/0/testcell" weight="0.3143237466" delay="0ms"/>
+        </projection>
+        <projection id="proj__2_STPc" presynapticPopulation="_2" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../STPc/0/testcell" weight="0.000071" delay="0ms"/>
+        </projection>
+        <projection id="proj__5_STPc" presynapticPopulation="_5" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../STPc/0/testcell" weight="0.0000284" delay="0ms"/>
+        </projection>
+        <projection id="proj__10_STPc" presynapticPopulation="_10" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../STPc/0/testcell" weight="0.0014476812" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_STPc" presynapticPopulation="_24c" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../STPc/0/testcell" weight="0.0000142" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_STPc" presynapticPopulation="_46d" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../STPc/0/testcell" weight="0.0071674414" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_STPc" presynapticPopulation="_7A" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../STPc/0/testcell" weight="0.0014476812" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B_STPc" presynapticPopulation="_7B" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../STPc/0/testcell" weight="0.0002270873" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_STPc" presynapticPopulation="_7m" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../STPc/0/testcell" weight="0.0000426" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_STPc" presynapticPopulation="_8B" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../STPc/0/testcell" weight="0.0007948054" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_STPc" presynapticPopulation="_8l" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../STPc/0/testcell" weight="0.0005109463" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_STPc" presynapticPopulation="_8m" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../STPc/0/testcell" weight="0.0072525991" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_STPc" presynapticPopulation="_9_46d" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../STPc/0/testcell" weight="0.0022992584" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_STPc" presynapticPopulation="DP" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../STPc/0/testcell" weight="0.0001987013" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_STPc" presynapticPopulation="F5" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../STPc/0/testcell" weight="0.0010360856" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_STPc" presynapticPopulation="F7" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../STPc/0/testcell" weight="0.0007238406" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_STPc" presynapticPopulation="MT" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../STPc/0/testcell" weight="0.0007380336" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_STPc" presynapticPopulation="PBr" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../STPc/0/testcell" weight="0.0201539935" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_STPc" presynapticPopulation="STPi" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../STPc/0/testcell" weight="0.4095518575" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_STPc" presynapticPopulation="STPr" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../STPc/0/testcell" weight="0.0123975446" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_STPc" presynapticPopulation="TEO" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../STPc/0/testcell" weight="0.0001703154" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_STPc" presynapticPopulation="TEpd" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../STPc/0/testcell" weight="0.0008089983" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_STPc" presynapticPopulation="V2" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../STPc/0/testcell" weight="0.0003974027" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_STPc" presynapticPopulation="V4" postsynapticPopulation="STPc" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../STPc/0/testcell" weight="0.0013909094" delay="0ms"/>
+        </projection>
+        <projection id="proj__10_STPi" presynapticPopulation="_10" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../STPi/0/testcell" weight="0.023260646" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_STPi" presynapticPopulation="_24c" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../STPi/0/testcell" weight="0.0001350551" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_STPi" presynapticPopulation="_46d" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../STPi/0/testcell" weight="0.0035010441" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_STPi" presynapticPopulation="_8B" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../STPi/0/testcell" weight="0.0002077771" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_STPi" presynapticPopulation="_8m" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../STPi/0/testcell" weight="0.0000416" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_STPi" presynapticPopulation="_9_46d" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../STPi/0/testcell" weight="0.0001973882" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_STPi" presynapticPopulation="F7" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../STPi/0/testcell" weight="0.0000831" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_STPi" presynapticPopulation="MT" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../STPi/0/testcell" weight="0.0000416" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_STPi" presynapticPopulation="PBr" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../STPi/0/testcell" weight="0.3347704583" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_STPi" presynapticPopulation="STPc" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../STPi/0/testcell" weight="0.2279938082" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_STPi" presynapticPopulation="STPr" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../STPi/0/testcell" weight="0.0249540293" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_STPi" presynapticPopulation="TEpd" postsynapticPopulation="STPi" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../STPi/0/testcell" weight="0.000145444" delay="0ms"/>
+        </projection>
+        <projection id="proj__10_STPr" presynapticPopulation="_10" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_10/0/testcell" postCellId="../STPr/0/testcell" weight="0.0329553112" delay="0ms"/>
+        </projection>
+        <projection id="proj__24c_STPr" presynapticPopulation="_24c" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_24c/0/testcell" postCellId="../STPr/0/testcell" weight="0.0002728089" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_STPr" presynapticPopulation="_46d" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../STPr/0/testcell" weight="0.0101048404" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_STPr" presynapticPopulation="_7A" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../STPr/0/testcell" weight="0.0001936943" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_STPr" presynapticPopulation="_8B" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../STPr/0/testcell" weight="0.0006001795" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_STPr" presynapticPopulation="_8l" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../STPr/0/testcell" weight="0.0000491" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_STPr" presynapticPopulation="_8m" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../STPr/0/testcell" weight="0.0003546515" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_STPr" presynapticPopulation="_9_46d" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../STPr/0/testcell" weight="0.0001023033" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_STPr" presynapticPopulation="_9_46v" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../STPr/0/testcell" weight="0.0005387975" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_STPr" presynapticPopulation="DP" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../STPr/0/testcell" weight="0.0000382" delay="0ms"/>
+        </projection>
+        <projection id="proj_F1_STPr" presynapticPopulation="F1" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../F1/0/testcell" postCellId="../STPr/0/testcell" weight="0.0000109" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_STPr" presynapticPopulation="F2" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../STPr/0/testcell" weight="0.0000164" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_STPr" presynapticPopulation="F7" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../STPr/0/testcell" weight="0.0000518" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_STPr" presynapticPopulation="MT" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../STPr/0/testcell" weight="0.0000164" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_STPr" presynapticPopulation="PBr" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../STPr/0/testcell" weight="0.1985584779" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_STPr" presynapticPopulation="STPc" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../STPr/0/testcell" weight="0.0302613236" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_STPr" presynapticPopulation="STPi" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../STPr/0/testcell" weight="0.2401400055" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_STPr" presynapticPopulation="TEO" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../STPr/0/testcell" weight="0.00000546" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_STPr" presynapticPopulation="TEpd" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../STPr/0/testcell" weight="0.0009575591" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_STPr" presynapticPopulation="V2" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../STPr/0/testcell" weight="0.00000546" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_STPr" presynapticPopulation="V4" postsynapticPopulation="STPr" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../STPr/0/testcell" weight="0.00000273" delay="0ms"/>
+        </projection>
+        <projection id="proj__2_TEO" presynapticPopulation="_2" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_2/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000385" delay="0ms"/>
+        </projection>
+        <projection id="proj__5_TEO" presynapticPopulation="_5" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_5/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000256" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_TEO" presynapticPopulation="_46d" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000128" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_TEO" presynapticPopulation="_7A" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../TEO/0/testcell" weight="0.0004616568" delay="0ms"/>
+        </projection>
+        <projection id="proj__7B_TEO" presynapticPopulation="_7B" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7B/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000256" delay="0ms"/>
+        </projection>
+        <projection id="proj__7m_TEO" presynapticPopulation="_7m" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7m/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000513" delay="0ms"/>
+        </projection>
+        <projection id="proj__8B_TEO" presynapticPopulation="_8B" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8B/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000128" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_TEO" presynapticPopulation="_8l" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../TEO/0/testcell" weight="0.0060848936" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_TEO" presynapticPopulation="_9_46d" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000256" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_TEO" presynapticPopulation="_9_46v" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../TEO/0/testcell" weight="0.0003911259" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_TEO" presynapticPopulation="DP" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../TEO/0/testcell" weight="0.0011669659" delay="0ms"/>
+        </projection>
+        <projection id="proj_F2_TEO" presynapticPopulation="F2" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../F2/0/testcell" postCellId="../TEO/0/testcell" weight="0.00000641" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_TEO" presynapticPopulation="F5" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000385" delay="0ms"/>
+        </projection>
+        <projection id="proj_F7_TEO" presynapticPopulation="F7" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../F7/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000449" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_TEO" presynapticPopulation="MT" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../TEO/0/testcell" weight="0.0243972814" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_TEO" presynapticPopulation="PBr" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000513" delay="0ms"/>
+        </projection>
+        <projection id="proj_ProM_TEO" presynapticPopulation="ProM" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../ProM/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000128" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_TEO" presynapticPopulation="STPc" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../TEO/0/testcell" weight="0.0000192" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_TEO" presynapticPopulation="STPi" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../TEO/0/testcell" weight="0.000128238" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_TEO" presynapticPopulation="STPr" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../TEO/0/testcell" weight="0.0013144396" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_TEO" presynapticPopulation="TEpd" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../TEO/0/testcell" weight="0.2313221339" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_TEO" presynapticPopulation="V2" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../TEO/0/testcell" weight="0.024615286" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_TEO" presynapticPopulation="V4" postsynapticPopulation="TEO" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../TEO/0/testcell" weight="0.2558733008" delay="0ms"/>
+        </projection>
+        <projection id="proj__46d_TEpd" presynapticPopulation="_46d" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../_46d/0/testcell" postCellId="../TEpd/0/testcell" weight="0.000015" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_TEpd" presynapticPopulation="_7A" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../TEpd/0/testcell" weight="0.002020121" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_TEpd" presynapticPopulation="_8l" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0045941462" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_TEpd" presynapticPopulation="_8m" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0000251" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_TEpd" presynapticPopulation="_9_46v" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0014185961" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_TEpd" presynapticPopulation="DP" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0000802" delay="0ms"/>
+        </projection>
+        <projection id="proj_F5_TEpd" presynapticPopulation="F5" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../F5/0/testcell" postCellId="../TEpd/0/testcell" weight="0.00000752" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_TEpd" presynapticPopulation="MT" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../TEpd/0/testcell" weight="0.000015" delay="0ms"/>
+        </projection>
+        <projection id="proj_PBr_TEpd" presynapticPopulation="PBr" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../PBr/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0000602" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_TEpd" presynapticPopulation="STPc" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../TEpd/0/testcell" weight="0.00000501" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_TEpd" presynapticPopulation="STPi" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0000251" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_TEpd" presynapticPopulation="STPr" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0004285865" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_TEpd" presynapticPopulation="TEO" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../TEpd/0/testcell" weight="0.1376263829" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_TEpd" presynapticPopulation="V2" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0001754448" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_TEpd" presynapticPopulation="V4" postsynapticPopulation="TEpd" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../TEpd/0/testcell" weight="0.0273894322" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_V1" presynapticPopulation="_8l" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../V1/0/testcell" weight="0.0002146841" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_V1" presynapticPopulation="DP" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../V1/0/testcell" weight="0.000490637" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_V1" presynapticPopulation="MT" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../V1/0/testcell" weight="0.0588525474" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_V1" presynapticPopulation="STPc" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../V1/0/testcell" weight="0.0016535204" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_V1" presynapticPopulation="STPi" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../V1/0/testcell" weight="0.0004321335" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_V1" presynapticPopulation="STPr" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../V1/0/testcell" weight="0.0000194" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_V1" presynapticPopulation="TEO" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../V1/0/testcell" weight="0.0270345555" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_V1" presynapticPopulation="TEpd" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../V1/0/testcell" weight="0.003630824" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_V1" presynapticPopulation="V2" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../V1/0/testcell" weight="0.7321572062" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_V1" presynapticPopulation="V4" postsynapticPopulation="V1" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../V1/0/testcell" weight="0.1277303437" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_V2" presynapticPopulation="_8l" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../V2/0/testcell" weight="0.0001089078" delay="0ms"/>
+        </projection>
+        <projection id="proj__8m_V2" presynapticPopulation="_8m" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8m/0/testcell" postCellId="../V2/0/testcell" weight="0.0000247" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_V2" presynapticPopulation="DP" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../V2/0/testcell" weight="0.0004211488" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_V2" presynapticPopulation="MT" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../V2/0/testcell" weight="0.0357308577" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_V2" presynapticPopulation="STPc" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../V2/0/testcell" weight="0.0000874" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_V2" presynapticPopulation="STPi" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../V2/0/testcell" weight="0.0000695" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_V2" presynapticPopulation="STPr" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../V2/0/testcell" weight="0.0000089" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_V2" presynapticPopulation="TEO" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../V2/0/testcell" weight="0.0032741902" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_V2" presynapticPopulation="TEpd" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../V2/0/testcell" weight="0.0010526816" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1_V2" presynapticPopulation="V1" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../V2/0/testcell" weight="0.7635622373" delay="0ms"/>
+        </projection>
+        <projection id="proj_V4_V2" presynapticPopulation="V4" postsynapticPopulation="V2" synapse="ampa">
+            <connectionWD id="0" preCellId="../V4/0/testcell" postCellId="../V2/0/testcell" weight="0.1513314995" delay="0ms"/>
+        </projection>
+        <projection id="proj__7A_V4" presynapticPopulation="_7A" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../_7A/0/testcell" postCellId="../V4/0/testcell" weight="0.0001046481" delay="0ms"/>
+        </projection>
+        <projection id="proj__8l_V4" presynapticPopulation="_8l" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../_8l/0/testcell" postCellId="../V4/0/testcell" weight="0.0024207995" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46d_V4" presynapticPopulation="_9_46d" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46d/0/testcell" postCellId="../V4/0/testcell" weight="0.00000362" delay="0ms"/>
+        </projection>
+        <projection id="proj__9_46v_V4" presynapticPopulation="_9_46v" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../_9_46v/0/testcell" postCellId="../V4/0/testcell" weight="0.000016" delay="0ms"/>
+        </projection>
+        <projection id="proj_DP_V4" presynapticPopulation="DP" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../DP/0/testcell" postCellId="../V4/0/testcell" weight="0.0000974" delay="0ms"/>
+        </projection>
+        <projection id="proj_MT_V4" presynapticPopulation="MT" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../MT/0/testcell" postCellId="../V4/0/testcell" weight="0.0846793577" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPc_V4" presynapticPopulation="STPc" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPc/0/testcell" postCellId="../V4/0/testcell" weight="0.0001079351" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPi_V4" presynapticPopulation="STPi" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPi/0/testcell" postCellId="../V4/0/testcell" weight="0.000232305" delay="0ms"/>
+        </projection>
+        <projection id="proj_STPr_V4" presynapticPopulation="STPr" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../STPr/0/testcell" postCellId="../V4/0/testcell" weight="0.0002565847" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEO_V4" presynapticPopulation="TEO" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEO/0/testcell" postCellId="../V4/0/testcell" weight="0.237817168" delay="0ms"/>
+        </projection>
+        <projection id="proj_TEpd_V4" presynapticPopulation="TEpd" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../TEpd/0/testcell" postCellId="../V4/0/testcell" weight="0.0748787813" delay="0ms"/>
+        </projection>
+        <projection id="proj_V1_V4" presynapticPopulation="V1" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../V1/0/testcell" postCellId="../V4/0/testcell" weight="0.0130466906" delay="0ms"/>
+        </projection>
+        <projection id="proj_V2_V4" presynapticPopulation="V2" postsynapticPopulation="V4" synapse="ampa">
+            <connectionWD id="0" preCellId="../V2/0/testcell" postCellId="../V4/0/testcell" weight="0.3908464576" delay="0ms"/>
+        </projection>
+    </network>
+</neuroml>
