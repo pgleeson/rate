@@ -2,6 +2,20 @@ from neuromllite import *
 
 import random
 
+colors = {}
+centres = {}
+
+f = open('MERetal14_on_F99.tsv')
+for l in f:
+    w = l.split()
+    id = w[0].replace('-','_')
+    colors[id] = w[1]
+    scale = 100
+    centres[id] = (float(w[2])*scale,float(w[3])*scale,float(w[4])*scale)
+
+print centres
+    
+
 ################################################################################
 ###   Build a new network
 
@@ -18,10 +32,6 @@ net.synapses.append(Synapse(id='ampa',
                             parameters={'e_rev':-10, 'tau_syn':2}))
                             
 
-vis = RectangularRegion(id='VIS', x=0,y=0,z=0,width=100,height=100,depth=100)
-net.regions.append(vis)
-oth = RectangularRegion(id='OTHER', x=120,y=120,z=0,width=200,height=200,depth=100)
-net.regions.append(oth)
 
 f = open('Neuron_2015_Table.csv')
 all_tgts = []
@@ -56,15 +66,18 @@ for l in f:
                 
                 repl = pop_id.replace('/','_')
                 
+                p = centres[repl]
                 used_ids[pop_id] = '_%s'%repl if repl[0].isdigit() else repl
                 
-                region = vis if 'v' in pop_id.lower() else oth
+                r = RectangularRegion(id='Region_%s'%used_ids[pop_id], x=p[0],y=p[1],z=p[2],width=1,height=1,depth=1)
+                net.regions.append(r)
+
                 p0 = Population(id=used_ids[pop_id], 
                                 size=1, 
                                 component=cell.id, 
                                 properties={'color':'%s %s %s'%(random.random(),random.random(),random.random()),
-                                            'radius':10},
-                                random_layout = RandomLayout(region=region.id))
+                                            'radius':150},
+                                random_layout = RandomLayout(region=r.id))
 
                 net.populations.append(p0)
                 pop_ids.append(pop_id)

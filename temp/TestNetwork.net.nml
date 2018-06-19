@@ -5,235 +5,235 @@
     <network id="TestNetwork">
         <notes>....</notes>
         <population id="_2" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.0093371325406 0.241284706408 0.220153758665"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.286038196139 0.634644457304 0.0152393263118"/>
+            <property tag="region" value="Region__2"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="313.290707138427763" y="208.146519835070535" z="0.749147005858719"/>
+                <location x="-2214.933546464308165" y="-894.459267400824615" z="1311.307491470058494"/>
             </instance>
         </population>
         <population id="_24c" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.438411392176 0.418837604915 0.258954450516"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.544561728932 0.142611019258 0.561373664173"/>
+            <property tag="region" value="Region__24c"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="302.195192489824819" y="307.853799472752826" z="58.222757305894909"/>
+                <location x="-444.389024037550882" y="1770.639268997363843" z="1281.882227573058799"/>
             </instance>
         </population>
         <population id="_46d" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.698555751663 0.814382049591 0.333260977679"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.186798723202 0.476708656621 0.48577146129"/>
+            <property tag="region" value="Region__46d"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="254.312696297597" y="136.787645367416786" z="76.648093279179633"/>
+                <location x="-949.928436518512058" y="1863.583938226837063" z="1244.566480932791819"/>
             </instance>
         </population>
         <population id="_7A" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.630983852442 0.793942456202 0.363394031473"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.708954457846 0.519433486698 0.20661867357"/>
+            <property tag="region" value="Region__7A"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="167.361955072623545" y="126.162804345321987" z="78.877271723628354"/>
+                <location x="-1903.763190224636901" y="-2390.669185978273163" z="1784.088772717236225"/>
             </instance>
         </population>
         <population id="_7B" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.141100692327 0.0875839826735 0.755914369517"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.0513283386687 0.115033116393 0.695006753908"/>
+            <property tag="region" value="Region__7B"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="189.217793119424613" y="244.656295007833705" z="61.581569510361525"/>
+                <location x="-2581.653911034402881" y="-1410.976718524960688" z="1317.11581569510372"/>
             </instance>
         </population>
         <population id="_9_46v" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.552350978252 0.829197478128 0.798228854403"/>
-            <property tag="region" value="VIS"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.827500044454 0.608591808769 0.80419778253"/>
+            <property tag="region" value="Region__9_46v"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="14.855463870828755" y="18.309064740993165" z="11.441296968868764"/>
+                <location x="-1648.051445361291826" y="1591.583090647410017" z="1203.814412969688647"/>
             </instance>
         </population>
         <population id="F1" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.383642194281 0.0188305180774 0.780879047269"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.0550109697047 0.669712486309 0.139492251127"/>
+            <property tag="region" value="Region_F1"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="122.923756097381826" y="217.350308120951667" z="96.490156091621571"/>
+                <location x="-1245.185381219513147" y="-608.613248459395209" z="2023.964901560916132"/>
             </instance>
         </population>
         <population id="F5" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.787104741525 0.919524153075 0.33473930525"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.0976422445048 0.862709675406 0.136363126731"/>
+            <property tag="region" value="Region_F5"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="132.912456195437215" y="228.217637110226065" z="46.589855900830955"/>
+                <location x="-2012.43543771902273" y="534.941088185551052" z="1139.465898559008338"/>
             </instance>
         </population>
         <population id="ProM" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.521990761532 0.222746180435 0.843205722651"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.883675221838 0.774439481409 0.542156571233"/>
+            <property tag="region" value="Region_ProM"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="240.292689912210278" y="137.785765998132462" z="57.900268618736646"/>
+                <location x="-2486.598536550438894" y="751.888928829990618" z="266.379002686187391"/>
             </instance>
         </population>
         <population id="_5" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.411581650638 0.637116731424 0.590193479387"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.737859803714 0.987170719827 0.657052240791"/>
+            <property tag="region" value="Region__5"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="173.917100763889664" y="231.286512111243098" z="64.463423417828267"/>
+                <location x="-1263.930414496180674" y="-2070.143567439443814" z="2107.144634234178284"/>
             </instance>
         </population>
         <population id="_7m" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.9357239968 0.330644309075 0.923811839185"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.94448472741 0.121731869233 0.237170891899"/>
+            <property tag="region" value="Region__7m"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="216.207274273303682" y="191.047829488596676" z="24.9152121361209"/>
+                <location x="-323.718963628633446" y="-2363.344760852556647" z="1779.549152121361203"/>
             </instance>
         </population>
         <population id="F2" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.109916231549 0.994846976229 0.293802396633"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.232501691576 0.913929482926 0.152374811749"/>
+            <property tag="region" value="Region_F2"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="306.703099608469302" y="210.677603895298716" z="53.016120691159031"/>
+                <location x="-906.666484501957711" y="343.253388019476517" z="2077.330161206911725"/>
             </instance>
         </population>
         <population id="F7" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.172511929075 0.619392966439 0.458976445158"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.314387773181 0.558464862393 0.582303800429"/>
+            <property tag="region" value="Region_F7"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="123.859913261943376" y="221.620385155958445" z="0.578023741774314"/>
+                <location x="-655.480700433690231" y="1349.808101925779738" z="1962.105780237417548"/>
             </instance>
         </population>
         <population id="STPi" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.0509883607534 0.0440942341414 0.959860100065"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.803621286623 0.109302400485 0.241492817846"/>
+            <property tag="region" value="Region_STPi"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="148.753685519119074" y="214.565385069481266" z="37.734744077259641"/>
+                <location x="-2680.35623157240434" y="-1112.227173074652683" z="-130.62265255922739"/>
             </instance>
         </population>
         <population id="_10" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.0910635604054 0.988710377057 0.467879223141"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.864295229656 0.27664830734 0.805027696224"/>
+            <property tag="region" value="Region__10"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="130.835039729228583" y="237.505701626213863" z="16.400322374196119"/>
+                <location x="-383.345824801353842" y="2597.587528508131072" z="783.064003223741906"/>
             </instance>
         </population>
         <population id="_8B" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.963075688253 0.831667583957 0.383848593101"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.467137220454 0.766330685908 0.973476828925"/>
+            <property tag="region" value="Region__8B"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="231.466047488293611" y="148.849144320381669" z="93.730708469622471"/>
+                <location x="-827.042669762558603" y="1436.744245721601828" z="1695.637307084696204"/>
             </instance>
         </population>
         <population id="_8l" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.0959729694238 0.363988165503 0.167450771275"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.0712239471409 0.626353511497 0.927696742257"/>
+            <property tag="region" value="Region__8l"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="274.19599430395499" y="311.386624469881099" z="14.122776441649954"/>
+                <location x="-1845.929020028480181" y="807.756933122349324" z="1328.341227764416544"/>
             </instance>
         </population>
         <population id="_8m" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.722286460543 0.976838435057 0.128052628252"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.300454701493 0.306699040944 0.787592686332"/>
+            <property tag="region" value="Region__8m"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="181.078541657539716" y="127.917924845592324" z="27.678369479169206"/>
+                <location x="-1280.794607291712282" y="819.23958962422796" z="1503.576783694791629"/>
             </instance>
         </population>
         <population id="_9_46d" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.618387389207 0.722369183539 0.421187840091"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.670770754179 0.86784754313 0.643798391689"/>
+            <property tag="region" value="Region__9_46d"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="281.302501023120726" y="155.468607055650807" z="15.457051471078964"/>
+                <location x="-1325.693487494884494" y="1596.077343035278318" z="1504.654570514710713"/>
             </instance>
         </population>
         <population id="DP" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.389769108642 0.83122326464 0.858249205053"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.328786207423 0.707872416236 0.476541918886"/>
+            <property tag="region" value="Region_DP"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="310.943731140478974" y="150.910280017808589" z="83.388929415123187"/>
+                <location x="-1496.745281344297609" y="-3148.945448599910833" z="1827.133889294151231"/>
             </instance>
         </population>
         <population id="PBr" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.00550569377297 0.976565094097 0.799131704194"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.560132444544 0.52158305848 0.235439731376"/>
+            <property tag="region" value="Region_PBr"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="128.212561254361503" y="197.236705667165666" z="34.959230196369248"/>
+                <location x="-2580.758937193728343" y="60.886183528335827" z="-736.850407698036406"/>
             </instance>
         </population>
         <population id="STPc" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.56124026851 0.655254179018 0.395488743618"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.152622234524 0.484368360522 0.148194442992"/>
+            <property tag="region" value="Region_STPc"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="188.341558550090781" y="283.292611342846044" z="47.593490813172821"/>
+                <location x="-2494.858292207249178" y="-2117.583536943285708" z="878.87593490813174"/>
             </instance>
         </population>
         <population id="STPr" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.528556303948 0.448016219885 0.205006794352"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.4466579029 0.636978855154 0.661916424709"/>
+            <property tag="region" value="Region_STPr"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="276.578057904480715" y="214.168025061769015" z="81.73440068581418"/>
+                <location x="-2218.417109710477234" y="80.070840125308834" z="-1168.482655993141861"/>
             </instance>
         </population>
         <population id="TEpd" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.807567985013 0.223153251526 0.0644439681653"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.347093528303 0.500461303587 0.215012755273"/>
+            <property tag="region" value="Region_TEpd"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="296.313519731121289" y="207.919279535927927" z="78.106359779248109"/>
+                <location x="-2687.918432401344489" y="-1387.560403602320321" z="-1035.418936402207464"/>
             </instance>
         </population>
         <population id="V2" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.941280692441 0.284696377259 0.550086799086"/>
-            <property tag="region" value="VIS"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.0277632709325 0.413246818696 0.365135205935"/>
+            <property tag="region" value="Region_V2"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="81.474116025769732" y="29.567891564250736" z="12.387667430690597"/>
+                <location x="-1176.485258839742301" y="-3804.304321084357525" z="195.023876674306905"/>
             </instance>
         </population>
         <population id="MT" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.673355086419 0.570993089646 0.665906185197"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.0571339180945 0.296232113704 0.7549618756"/>
+            <property tag="region" value="Region_MT"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="157.124372148997708" y="207.211958719882915" z="11.946740701121195"/>
+                <location x="-1912.314378139255041" y="-2476.363940206400912" z="746.319467407011302"/>
             </instance>
         </population>
         <population id="TEO" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.489959388329 0.19886842003 0.808387597753"/>
-            <property tag="region" value="OTHER"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.616804217689 0.868099846092 0.966461832644"/>
+            <property tag="region" value="Region_TEO"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="225.959828351576618" y="285.884232283488473" z="48.520115298643482"/>
+                <location x="-2641.970200858242151" y="-2359.570578838582605" z="-488.814798847013549"/>
             </instance>
         </population>
         <population id="V1" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.0195938519629 0.289352676992 0.59847568036"/>
-            <property tag="region" value="VIS"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.415576167022 0.304910027287 0.583961748957"/>
+            <property tag="region" value="Region_V1"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="81.773400170180395" y="65.639162253941834" z="64.104303115169046"/>
+                <location x="-1186.182265998298135" y="-4179.643608377460623" z="534.641043031151639"/>
             </instance>
         </population>
         <population id="V4" component="testcell" size="1" type="populationList">
-            <property tag="color" value="0.0669928365416 0.833799324717 0.125884717863"/>
-            <property tag="region" value="VIS"/>
-            <property tag="radius" value="10"/>
+            <property tag="color" value="0.420697324865 0.064593036322 0.355255954963"/>
+            <property tag="region" value="Region_V4"/>
+            <property tag="radius" value="150"/>
             <instance id="0">
-                <location x="34.53489252042602" y="70.265894904832479" z="80.994058373120282"/>
+                <location x="-2347.554651074795856" y="-2842.997341050951491" z="84.009940583731208"/>
             </instance>
         </population>
         <projection id="proj__24c__2" presynapticPopulation="_24c" postsynapticPopulation="_2" synapse="ampa">
