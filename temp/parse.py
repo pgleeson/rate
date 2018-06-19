@@ -62,7 +62,8 @@ for l in f:
                 p0 = Population(id=used_ids[pop_id], 
                                 size=1, 
                                 component=cell.id, 
-                                properties={'color':'%s %s %s'%(random.random(),random.random(),random.random())},
+                                properties={'color':'%s %s %s'%(random.random(),random.random(),random.random()),
+                                            'radius':10},
                                 random_layout = RandomLayout(region=region.id))
 
                 net.populations.append(p0)
