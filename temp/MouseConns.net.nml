@@ -3,7 +3,7 @@
     <IF_cond_alpha id="testcell" cm="1." i_offset="0.1" tau_syn_E="2." tau_syn_I="0.5" v_init="-65." tau_m="20." tau_refrac="5." v_reset="-65." v_rest="-65." v_thresh="-50." e_rev_E="-10." e_rev_I="-70."/>
     <alphaCondSynapse id="ampa" tau_syn="2." e_rev="-10."/>
     <network id="MouseConns">
-        <notes>NOTE: this is only a quick demo!! Do not use it for your research &amp; expect an accurate conversion of the source data!!! </notes>
+        <notes>NOTE: this is only a quick demo!! Do not use it for your research assuming an accurate conversion of the source data!!! </notes>
         <population id="AUDd5" component="testcell" size="1" type="populationList">
             <property tag="color" value="0.6 0 0"/>
             <property tag="region" value="AUDd5"/>
