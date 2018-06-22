@@ -1,6 +1,5 @@
 <Lems>
 
-    <Include file="RateBased2.xml" />
     
     <!--Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.-->
     <silentSynapse id="silent1"/>
@@ -11,4 +10,184 @@
     
     <pulseGenerator id="baselineE" delay="50ms" duration="50ms" amplitude="8nA" />
 
+    
+    
+    <ComponentType name="baseRateUnit"
+        extends="baseCellMembPot"
+        description="Base type of any cell/population which has a (dimensional) rate _r.">
+
+        <Exposure name="r" dimension="per_time"/>
+
+    </ComponentType>
+    
+    <ComponentType name="baseRateUnitDL"
+        extends="baseCellMembPotDL"
+        description="Base type of any cell/population which has a (dimensionless) rate _r.">
+
+        <Exposure name="R" dimension="none"/>
+        
+
+    </ComponentType>
+    
+    
+    <ComponentType  name="simpleRateUnit"
+                    extends="baseRateUnit"
+                    description="...">
+
+        <Parameter name="r0" dimension="per_time"/>
+        <Parameter name="tau" dimension="time"/>
+
+        <Attachments name="synapses" type="basePointCurrent"/>
+        
+        <Exposure name="iSyn" dimension="current"/>
+        <Exposure name="phi" dimension="current"/>
+        
+        <Constant name="NAMP_SCALE" dimension="current" value="1 nA"/>
+        <Constant name="HZ_SCALE" dimension="per_time" value="1 Hz"/>
+        <Constant name="MVOLT_SCALE" dimension="voltage" value="1mV"/>
+        
+
+        <Dynamics>
+
+            <!--<StateVariable name="v" dimension="voltage" exposure="v"/>
+            
+            <StateVariable name="v" dimension="voltage" exposure="v"/>-->
+            
+            <StateVariable name="r" dimension="per_time" exposure="r"/>
+            
+            <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
+            <DerivedVariable name="v" dimension="voltage" exposure="v" value="r * MVOLT_SCALE / HZ_SCALE" />
+           
+            
+            <ConditionalDerivedVariable name="phi" dimension="none" exposure="phi">
+            	<Case condition="iSyn .eq. 0*NAMP_SCALE" value="1"/>
+            	<Case condition="iSyn .neq. 0*NAMP_SCALE" value="iSyn / ( (1 - exp(-1*iSyn/NAMP_SCALE)) * NAMP_SCALE)"/>
+            </ConditionalDerivedVariable> 
+
+            <TimeDerivative variable="r" value="(-1*r + phi*HZ_SCALE)/tau"/>
+            
+            <OnStart>
+                <StateAssignment variable="r" value="r0"/>
+            </OnStart>
+            <!--
+            -->
+            <OnCondition test="r .gt. 100*r0">
+                <EventOut port="spike"/>
+            </OnCondition>
+
+        </Dynamics>
+
+    </ComponentType>
+    
+    
+    <ComponentType  name="simpleRateUnitDL"
+                    extends="baseRateUnitDL"
+                    description="...">
+
+        
+        <Parameter name="R0" dimension="none"/>
+        
+        <Parameter name="tau" dimension="time"/>
+
+        <Attachments name="synapses" type="basePointCurrentDL"/>
+        
+        <Exposure name="ISyn" dimension="none"/>
+        
+        <Exposure name="phi" dimension="none"/>
+        
+
+        <Dynamics>
+
+            <!--<StateVariable name="v" dimension="voltage" exposure="v"/>-->
+            
+            <StateVariable name="V" dimension="none" exposure="V"/>
+            
+            <StateVariable name="R" dimension="none" exposure="R"/>
+            
+            <DerivedVariable name="ISyn" dimension="none" exposure="ISyn" select="synapses[*]/I" reduce="add" />
+           
+            
+            <ConditionalDerivedVariable name="phi" dimension="none" exposure="phi">
+            	<Case condition="ISyn .eq. 0" value="1"/>
+            	<Case condition="ISyn .neq. 0" value="ISyn / (1 - exp(-1*ISyn))"/>
+            </ConditionalDerivedVariable> 
+
+            <TimeDerivative variable="R" value="(-1*R + phi)/tau"/>
+            
+            <OnStart>
+                <StateAssignment variable="R" value="R0"/>
+            </OnStart>
+            <!--
+            -->
+            <OnCondition test="R .gt. R0">
+                <EventOut port="spike"/>
+            </OnCondition>
+
+        </Dynamics>
+
+    </ComponentType>
+    
+    
+
+    <ComponentType name="silentSynapseDL"
+                   extends="baseGradedSynapse"
+                   description="Dummy synapse which emits no current. Used as presynaptic endpoint for analog synaptic connection.">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> <!-- Not used...-->
+    
+        <Exposure name="I" dimension="none"/>
+        
+        <Requirement name="V" dimension="none"/>
+
+        <InstanceRequirement name="peer" type="baseGradedSynapse"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="none" select="peer/R"/>
+            <DerivedVariable name="I" exposure="I"  value="0"/>
+        </Dynamics>
+        
+    </ComponentType>
+    
+    <ComponentType name="rateSynapseDL"
+                   extends="baseGradedSynapse"
+                   description="...">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> 
+        
+        <Constant name="SEC" dimension="time" value="1s"/>
+        
+        <Exposure name="I" dimension="none"/>
+        
+        <Requirement name="R" dimension="none"/>
+
+        <InstanceRequirement name="peer" type="rateSynapseDL"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="none" select="peer/R"/>
+            <DerivedVariable name="I" exposure="I"  value="weight * SEC * rpeer"/>
+        </Dynamics>
+    </ComponentType>
+    
+
+    <ComponentType name="rateSynapse"
+                   extends="baseGradedSynapse"
+                   description="...">
+        
+        <Property name="weight" dimension="none" defaultValue="1"/> 
+        
+        <Constant name="SEC" dimension="time" value="1s"/>
+        <Constant name="NAMP_SCALE" dimension="current" value="1nA"/>
+        
+        <Exposure name="i" dimension="current"/>
+        
+        <Requirement name="r" dimension="per_time"/>
+
+        <InstanceRequirement name="peer" type="rateSynapse"/>
+
+        <Dynamics>
+            <DerivedVariable name="rpeer" dimension="per_time" select="peer/r"/>
+            <DerivedVariable name="i" exposure="i"  value="weight * SEC * NAMP_SCALE * rpeer"/>
+        </Dynamics>
+    </ComponentType>
+    
 </Lems>
