@@ -5,12 +5,12 @@ import random
 colors = {}
 centres = {}
 
+scale = 10
 f = open('MERetal14_on_F99.tsv')
 for l in f:
     w = l.split()
     id = w[0].replace('-','_')
     colors[id] = w[1]
-    scale = 100
     centres[id] = (float(w[2])*scale,float(w[3])*scale,float(w[4])*scale)
 
 print centres
@@ -21,16 +21,24 @@ print centres
 
 net = Network(id='net0')
 net.notes = "...."
+net.parameters = {}
 
 cell = Cell(id='testcell', pynn_cell='IF_cond_alpha')
-cell.parameters = { "tau_refrac":5, "i_offset":.1 }
+cell.parameters = { "tau_refrac":5, "i_offset":0 }
 net.cells.append(cell)
 
 net.synapses.append(Synapse(id='ampa', 
                             pynn_receptor_type='excitatory', 
                             pynn_synapse_type='cond_alpha', 
-                            parameters={'e_rev':-10, 'tau_syn':2}))
+                            parameters={'e_rev':0, 'tau_syn':2}))
                             
+net.parameters['stim_amp'] = '850pA'
+input_source = InputSource(id='iclamp_0', 
+                           neuroml2_input='PulseGenerator', 
+                           parameters={'amplitude':'stim_amp', 'delay':'100ms', 'duration':'500ms'})
+
+net.input_sources.append(input_source)
+
 
 
 f = open('Neuron_2015_Table.csv')
@@ -76,7 +84,7 @@ for l in f:
                                 size=1, 
                                 component=cell.id, 
                                 properties={'color':'%s %s %s'%(random.random(),random.random(),random.random()),
-                                            'radius':150},
+                                            'radius':scale},
                                 random_layout = RandomLayout(region=r.id))
 
                 net.populations.append(p0)
@@ -96,6 +104,13 @@ for l in f:
 
 
 
+stim_pops = ['V1', '_8m']
+
+for pop in stim_pops:
+    net.inputs.append(Input(id='Stim_%s'%pop,
+                            input_source=input_source.id,
+                            population=pop,
+                            percentage=100))
 
 print(net)
 net.id = 'TestNetwork'
@@ -105,7 +120,7 @@ new_file = net.to_json_file('Example1_%s.json'%net.id)
 
 sim = Simulation(id='SimExample',
                  network=new_file,
-                 duration='100',
+                 duration='700',
                  dt='0.025',
                  recordTraces={'all':'*'})
 
