@@ -76,6 +76,19 @@
                 }
             }, 
             {
+                "LNPpop": {
+                    "size": "1*scale", 
+                    "component": "ifcell", 
+                    "properties": {
+                        "color": ".9 0.9 0", 
+                        "radius": 5
+                    }, 
+                    "random_layout": {
+                        "region": "region1"
+                    }
+                }
+            }, 
+            {
                 "expoisson": {
                     "size": "10", 
                     "component": "poisson_input", 
@@ -91,14 +104,26 @@
         ], 
         "projections": [
             {
-                "projEinput": {
+                "proj0": {
                     "presynaptic": "expoisson", 
                     "postsynaptic": "IFpop", 
                     "synapse": "ampa", 
                     "delay": 0, 
                     "weight": "in_weight", 
                     "random_connectivity": {
-                        "probability": 1
+                        "probability": 0.7
+                    }
+                }
+            }, 
+            {
+                "proj1": {
+                    "presynaptic": "expoisson", 
+                    "postsynaptic": "LNPpop", 
+                    "synapse": "ampa", 
+                    "delay": 0, 
+                    "weight": "in_weight", 
+                    "random_connectivity": {
+                        "probability": 0.7
                     }
                 }
             }

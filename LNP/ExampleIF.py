@@ -55,6 +55,14 @@ def generate():
                     component=ifcell.id, 
                     properties={'color':'.9 0 0', 'radius':5},
                     random_layout = RandomLayout(region=r1.id))
+    net.populations.append(pIF)
+
+    pLNP = Population(id='LNPpop', 
+                    size='1*scale', 
+                    component=ifcell.id, 
+                    properties={'color':'.9 0.9 0', 'radius':5},
+                    random_layout = RandomLayout(region=r1.id))
+    net.populations.append(pLNP)
                     
     pEpoisson = Population(id='expoisson', 
                            size='10', 
@@ -62,8 +70,6 @@ def generate():
                            properties={'color':'0.9 0.7 0.7', 'radius':3},
                            random_layout = RandomLayout(region=r1.id))
 
-
-    net.populations.append(pIF)
     net.populations.append(pEpoisson)
 
 
@@ -73,13 +79,21 @@ def generate():
                                 parameters={'tau_syn':0.1}))
                                 
     
-    net.projections.append(Projection(id='projEinput',
+    net.projections.append(Projection(id='proj0',
                                       presynaptic=pEpoisson.id, 
                                       postsynaptic=pIF.id,
                                       synapse='ampa',
                                       delay=0,
                                       weight='in_weight',
-                                      random_connectivity=RandomConnectivity(probability=1)))
+                                      random_connectivity=RandomConnectivity(probability=0.7)))
+    
+    net.projections.append(Projection(id='proj1',
+                                      presynaptic=pEpoisson.id, 
+                                      postsynaptic=pLNP.id,
+                                      synapse='ampa',
+                                      delay=0,
+                                      weight='in_weight',
+                                      random_connectivity=RandomConnectivity(probability=0.7)))
     
     
 

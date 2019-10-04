@@ -1,0 +1,59 @@
+<Lems xmlns="http://www.neuroml.org/lems/0.7.4"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.neuroml.org/lems/0.7.4 ../../LEMS/Schemas/LEMS/LEMS_v0.7.4.xsd" >
+
+    <ComponentType  name="lnpCell"
+                    extends="baseCellMembPot"
+                    description="...">
+       
+        <Parameter name="Nmid" dimension="none"/>
+        <Parameter name="Nscale" dimension="none"/>
+    
+        
+        <Attachments name="synapses" type="basePointCurrent"/>
+        
+        <Exposure name="iSyn" dimension="current"/>
+        <Exposure name="L" dimension="none"/>
+        <Exposure name="N" dimension="per_time"/>
+        <Exposure name="toss" dimension="none"/>
+        <Exposure name="tsince"
+                  dimension="time"
+                  description="Time since the last spike was emitted"/>
+        <Constant name="NAMP" dimension="current" value="1nA"/>
+        
+
+        <Dynamics>
+
+            <StateVariable name="v" dimension="voltage" exposure="v"/>
+            <StateVariable name="tsince" dimension="time" exposure="tsince"/>
+            
+            <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
+            <DerivedVariable name="L" dimension="none" exposure="L" value="iSyn/NAMP"/>
+            <DerivedVariable name="N" dimension="none" exposure="N" value="1 / (1 + exp(0 - (L - Nmid)/Nscale))"/>
+            <DerivedVariable name="toss" dimension="none" exposure="toss" value="random(10)"/>
+            
+            <TimeDerivative variable="tsince" value="1"/>
+           <!--
+            
+            <DerivedVariable name="f" dimension="per_time" exposure="f" value="( (V-Vth)/(tau*(Vth-Vr)) ) * (1/(1-exp(-1*(V-Vth)/Vscale)))"/>
+
+            <TimeDerivative variable="r" value="(-1*r + f)/tau_r"/>-->
+
+            <!--<OnStart>
+                <StateAssignment variable="V" value="Vr"/>
+            </OnStart>-->
+            
+            <OnCondition test="N .gt. toss">
+                <StateAssignment variable="tsince" value="0"/>
+                <EventOut port="spike"/>
+            </OnCondition>
+
+        </Dynamics>
+
+    </ComponentType>
+    
+    
+    
+    <lnpCell id="lnp0" Nmid="0.01" Nscale="0.001"/> 
+    
+</Lems>

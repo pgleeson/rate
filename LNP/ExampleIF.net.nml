@@ -4,21 +4,21 @@
     Generation seed: 1234
     NeuroMLlite parameters: 
         V0 = -70
-        in_rate = 50
+        in_rate = 150
         in_weight = 0.01
-        scale = 10
+        scale = 3
         tauMem = 20.0
         tauRef = 2
         tauSyn = 0.1
         theta = -50.0</notes>
     <IF_curr_alpha id="ifcell" cm="0.001" i_offset="0." tau_syn_E="0.1" tau_syn_I="0.5" v_init="-70." tau_m="20." tau_refrac="2." v_reset="-70." v_rest="-70." v_thresh="-50."/>
     <alphaCurrSynapse id="ampa" tau_syn="0.1"/>
-    <SpikeSourcePoisson id="poisson_input" start="0.0ms" duration="1000000000.0ms" rate="50.0Hz"/>
+    <SpikeSourcePoisson id="poisson_input" start="0.0ms" duration="1000000000.0ms" rate="150.0Hz"/>
     <network id="ExampleIF">
         <notes>Example with IF</notes>
         <property tag="recommended_dt_ms" value="0.025"/>
         <property tag="recommended_duration_ms" value="1000.0"/>
-        <population id="IFpop" component="ifcell" size="10" type="populationList">
+        <population id="IFpop" component="ifcell" size="3" type="populationList">
             <property tag="color" value=".9 0 0"/>
             <property tag="region" value="region1"/>
             <property tag="radius" value="5"/>
@@ -31,26 +31,19 @@
             <instance id="2">
                 <location x="671.563481487985086" y="8.393822683708397" z="766.480932791796249"/>
             </instance>
-            <instance id="3">
+        </population>
+        <population id="LNPpop" component="ifcell" size="3" type="populationList">
+            <property tag="color" value=".9 0.9 0"/>
+            <property tag="region" value="region1"/>
+            <property tag="radius" value="5"/>
+            <instance id="0">
                 <location x="236.809775363117751" y="3.081402172660996" z="788.772717236283484"/>
             </instance>
-            <instance id="4">
+            <instance id="1">
                 <location x="346.088965597123092" y="62.328147503916853" z="615.815695103615212"/>
             </instance>
-            <instance id="5">
+            <instance id="2">
                 <location x="148.55463870828757" y="18.309064740993165" z="114.412969688687639"/>
-            </instance>
-            <instance id="6">
-                <location x="14.618780486909122" y="48.675154060475833" z="964.901560916215658"/>
-            </instance>
-            <instance id="7">
-                <location x="64.562280977186077" y="54.108818555113025" z="465.898559008309576"/>
-            </instance>
-            <instance id="8">
-                <location x="601.463449561051448" y="8.892882999066231" z="579.002686187366521"/>
-            </instance>
-            <instance id="9">
-                <location x="269.585503819448263" y="55.643256055621556" z="644.634234178282668"/>
             </instance>
         </population>
         <population id="expoisson" component="poisson_input" size="10" type="populationList">
@@ -58,137 +51,78 @@
             <property tag="region" value="region1"/>
             <property tag="radius" value="3"/>
             <instance id="0">
-                <location x="481.036371366518438" y="35.523914744298338" z="249.152121361208998"/>
+                <location x="14.618780486909122" y="48.675154060475833" z="964.901560916215658"/>
             </instance>
             <instance id="1">
-                <location x="933.515498042346735" y="45.338801947649351" z="530.161206911590284"/>
+                <location x="64.562280977186077" y="54.108818555113025" z="465.898559008309576"/>
             </instance>
             <instance id="2">
-                <location x="19.299566309716852" y="50.810192577979215" z="5.780237417743139"/>
+                <location x="601.463449561051448" y="8.892882999066231" z="579.002686187366521"/>
             </instance>
             <instance id="3">
-                <location x="143.768427595595369" y="47.282692534740633" z="377.347440772596428"/>
+                <location x="269.585503819448263" y="55.643256055621556" z="644.634234178282668"/>
             </instance>
             <instance id="4">
-                <location x="54.175198646142839" y="58.752850813106939" z="164.003223741961193"/>
+                <location x="481.036371366518438" y="35.523914744298338" z="249.152121361208998"/>
             </instance>
             <instance id="5">
-                <location x="557.330237441468171" y="14.424572160190829" z="937.307084696224706"/>
+                <location x="933.515498042346735" y="45.338801947649351" z="530.161206911590284"/>
             </instance>
             <instance id="6">
-                <location x="770.979971519774949" y="95.693312234940535" z="141.227764416499525"/>
+                <location x="19.299566309716852" y="50.810192577979215" z="5.780237417743139"/>
             </instance>
             <instance id="7">
-                <location x="305.392708287698611" y="3.958962422796164" z="276.783694791692085"/>
+                <location x="143.768427595595369" y="47.282692534740633" z="377.347440772596428"/>
             </instance>
             <instance id="8">
-                <location x="806.512505115603744" y="17.7343035278254" z="154.570514710789638"/>
+                <location x="54.175198646142839" y="58.752850813106939" z="164.003223741961193"/>
             </instance>
             <instance id="9">
-                <location x="954.718655702394926" y="15.4551400089043" z="833.889294151231752"/>
+                <location x="557.330237441468171" y="14.424572160190829" z="937.307084696224706"/>
             </instance>
         </population>
-        <projection id="projEinput" presynapticPopulation="expoisson" postsynapticPopulation="IFpop" synapse="ampa">
-            <connectionWD id="0" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="1" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="2" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="3" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="4" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="5" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="6" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="7" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="8" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="9" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="10" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="11" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="12" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="13" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="14" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="15" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="16" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="17" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="18" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="19" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="20" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="21" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="22" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="23" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="24" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="25" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="26" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="27" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="28" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="29" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="30" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="31" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="32" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="33" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="34" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="35" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="36" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="37" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="38" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="39" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="40" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="41" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="42" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="43" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="44" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="45" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="46" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="47" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="48" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="49" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="50" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="51" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="52" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="53" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="54" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="55" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="56" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="57" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="58" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="59" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="60" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="61" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="62" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="63" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="64" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="65" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="66" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="67" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="68" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="69" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="70" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="71" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="72" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="73" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="74" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="75" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="76" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="77" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="78" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="79" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="80" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="81" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="82" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="83" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="84" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="85" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="86" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="87" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="88" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="89" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="90" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="91" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="92" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="93" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/3/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="94" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/4/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="95" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/5/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="96" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/6/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="97" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/7/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="98" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/8/ifcell" weight="0.01" delay="0ms"/>
-            <connectionWD id="99" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/9/ifcell" weight="0.01" delay="0ms"/>
+        <projection id="proj0" presynapticPopulation="expoisson" postsynapticPopulation="IFpop" synapse="ampa">
+            <connectionWD id="0" preCellId="../expoisson/0/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="1" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="2" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="3" preCellId="../expoisson/1/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="4" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="5" preCellId="../expoisson/2/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="6" preCellId="../expoisson/3/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="7" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="8" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="9" preCellId="../expoisson/4/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="10" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="11" preCellId="../expoisson/5/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="12" preCellId="../expoisson/6/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="13" preCellId="../expoisson/7/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="14" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="15" preCellId="../expoisson/8/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="16" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="17" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="18" preCellId="../expoisson/9/poisson_input" postCellId="../IFpop/2/ifcell" weight="0.01" delay="0ms"/>
+        </projection>
+        <projection id="proj1" presynapticPopulation="expoisson" postsynapticPopulation="LNPpop" synapse="ampa">
+            <connectionWD id="0" preCellId="../expoisson/0/poisson_input" postCellId="../LNPpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="1" preCellId="../expoisson/0/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="2" preCellId="../expoisson/1/poisson_input" postCellId="../LNPpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="3" preCellId="../expoisson/1/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="4" preCellId="../expoisson/2/poisson_input" postCellId="../LNPpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="5" preCellId="../expoisson/3/poisson_input" postCellId="../LNPpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="6" preCellId="../expoisson/3/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="7" preCellId="../expoisson/4/poisson_input" postCellId="../LNPpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="8" preCellId="../expoisson/5/poisson_input" postCellId="../LNPpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="9" preCellId="../expoisson/5/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="10" preCellId="../expoisson/6/poisson_input" postCellId="../LNPpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="11" preCellId="../expoisson/6/poisson_input" postCellId="../LNPpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="12" preCellId="../expoisson/6/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="13" preCellId="../expoisson/7/poisson_input" postCellId="../LNPpop/0/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="14" preCellId="../expoisson/7/poisson_input" postCellId="../LNPpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="15" preCellId="../expoisson/7/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="16" preCellId="../expoisson/8/poisson_input" postCellId="../LNPpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="17" preCellId="../expoisson/8/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="18" preCellId="../expoisson/9/poisson_input" postCellId="../LNPpop/1/ifcell" weight="0.01" delay="0ms"/>
+            <connectionWD id="19" preCellId="../expoisson/9/poisson_input" postCellId="../LNPpop/2/ifcell" weight="0.01" delay="0ms"/>
         </projection>
     </network>
 </neuroml>

@@ -1,0 +1,50 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.3.19 (libNeuroML v0.2.47)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="Sim0" reportFile="report.Sim0.txt"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="PyNN.xml"/>
+    
+    <Include file="LNPTest.xml"/>
+    
+    <expCurrSynapse id="ampa" tau_syn="10"/>
+    
+    <SpikeSourcePoisson id="poisson_input" start="0.0ms" duration="1000000000.0ms" rate="50.0Hz"/>
+    
+    <network id="ExampleIF">
+        <population id="LNPpop" component="lnp0" size="1"/>
+        <population id="inpop" component="poisson_input" size="1"/>
+        <projection id="proj0" presynapticPopulation="inpop" postsynapticPopulation="LNPpop" synapse="ampa">
+            <connectionWD id="0" preCellId="../inpop[0]" postCellId="../LNPpop[0]" weight="0.01" delay="0ms"/>
+        </projection>
+    </network>
+   
+    <Simulation id="Sim0" length="1000.0ms" step="0.025ms" target="ExampleIF" seed="123">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="LNPpop0" title="Plots of LNPpop" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-80" ymax="40">
+            <Line id="IFpop_0_ifcell_v" quantity="LNPpop[0]/v" scale="1mV" color="#6aa799" timeScale="1ms"/>
+            <Line id="tt" quantity="inpop[0]/tsince" scale="1mV" color="#11a999" timeScale="1ms"/>
+            <Line id="spi" quantity="LNPpop[0]/tsince" scale="1mV" color="#ffff99" timeScale="1ms"/>
+        </Display>
+        <Display id="d2" title="Plots of LNPpop 2" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-80" ymax="40">
+            <Line id="iSyn" quantity="LNPpop[0]/iSyn" scale="1nA" color="#6a2222" timeScale="1ms"/>
+            <Line id="L" quantity="LNPpop[0]/L" scale="1" color="#6aa799" timeScale="1ms"/>
+            <Line id="N" quantity="LNPpop[0]/N" scale="1" color="#11a900" timeScale="1ms"/>
+            <Line id="toss" quantity="LNPpop[0]/toss" scale="1" color="#11ffff" timeScale="1ms"/>
+        </Display>
+        
+        
+    </Simulation>
+
+</Lems>
