@@ -27,3 +27,8 @@
 /temp/nature13186-s4_W_ipsi.csv
 /temp/retrograde-directed-weighted-connectivity_matrix-figure2.csv
 /temp2
+/LNP/*.gv*
+*.spikes
+*.dat
+/LNP/report*.txt
+/LNP/LEMS_SimExampleIF.xml

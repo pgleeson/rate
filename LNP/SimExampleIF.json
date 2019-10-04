@@ -1,0 +1,15 @@
+{
+    "SimExampleIF": {
+        "version": "NeuroMLlite v0.1.9", 
+        "network": "ExampleIF.json", 
+        "duration": 1000.0, 
+        "dt": 0.025, 
+        "seed": 123, 
+        "recordTraces": {
+            "IFpop": "*"
+        }, 
+        "recordSpikes": {
+            "all": "*"
+        }
+    }
+}
