@@ -33,3 +33,6 @@
 /LNP/report*.txt
 /LNP/LEMS_SimExampleIF.xml
 /McCP/report*.txt
+/McCP/*.gv*
+/McCP/ExampleNet.net.nml
+/McCP/LEMS_SimExampleNet.xml
