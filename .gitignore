@@ -32,3 +32,4 @@
 *.dat
 /LNP/report*.txt
 /LNP/LEMS_SimExampleIF.xml
+/McCP/report*.txt
