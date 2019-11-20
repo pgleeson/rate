@@ -11,6 +11,7 @@
     
     
     <sineGeneratorDL id="sg0" phase="0" delay="50ms" duration="800ms" amplitude="1.2" period="100ms"/>
+    <sineGeneratorDL id="sg1" phase="1" delay="150ms" duration="800ms" amplitude="0.4" period="50ms"/>
 
     <spikeGeneratorPoisson id="spikeGenPoisson" averageRate="50 Hz"/>
     

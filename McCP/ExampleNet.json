@@ -3,7 +3,7 @@
         "version": "NeuroMLlite v0.1.9", 
         "parameters": {
             "amp": 1.5, 
-            "scale": 4
+            "scale": 10
         }, 
         "notes": "Example with Net", 
         "cells": [
@@ -28,6 +28,11 @@
         "input_sources": [
             {
                 "sg0": {
+                    "neuroml2_source_file": "inputs.nml"
+                }
+            }, 
+            {
+                "sg1": {
                     "neuroml2_source_file": "inputs.nml"
                 }
             }
@@ -80,7 +85,7 @@
                     "synapse": "rsDL", 
                     "pre_synapse": "silentSyn_proj0", 
                     "type": "continuousProjection", 
-                    "weight": 0.5, 
+                    "weight": "random()", 
                     "random_connectivity": {
                         "probability": 0.6
                     }
@@ -89,10 +94,17 @@
         ], 
         "inputs": [
             {
-                "stim_McCPpop0": {
+                "stim0_McCPpop0": {
                     "input_source": "sg0", 
                     "population": "McCPpop0", 
-                    "percentage": 100.0
+                    "percentage": 60.0
+                }
+            }, 
+            {
+                "stim1_McCPpop0": {
+                    "input_source": "sg1", 
+                    "population": "McCPpop0", 
+                    "percentage": 60.0
                 }
             }
         ]

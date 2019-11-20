@@ -36,3 +36,4 @@
 /McCP/*.gv*
 /McCP/ExampleNet.net.nml
 /McCP/LEMS_SimExampleNet.xml
+*.mod
