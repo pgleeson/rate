@@ -39,3 +39,4 @@
 *.mod
 /popanalysis/LEMS_SimPopExample.xml
 report.*.txt
+*.gv*

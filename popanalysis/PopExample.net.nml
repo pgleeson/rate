@@ -3,28 +3,280 @@
     Generated network: PopExample
     Generation seed: 1234
     NeuroMLlite parameters: 
-        N = 5
+        N = 30
+        Wei = 0.01
+        Wie = 0.01
         fractionE = 0.8
         weightInput = 1</notes>
-    <include href="inputs.nml"/>
-    <IF_cond_alpha id="iafcell" cm="1." i_offset="0." tau_syn_E="2." tau_syn_I="0.5" v_init="-65." tau_m="20." tau_refrac="0." v_reset="-65." v_rest="-65." v_thresh="-50." e_rev_E="-10." e_rev_I="-70."/>
+    <include href="/home/padraig/git/rate/popanalysis/inputs.nml"/>
+    <IF_cond_alpha id="iafcell" cm="1." i_offset="0." tau_syn_E="2." tau_syn_I="10." v_init="-65." tau_m="20." tau_refrac="0." v_reset="-65." v_rest="-65." v_thresh="-50." e_rev_E="-10." e_rev_I="-80."/>
     <alphaCondSynapse id="ampaSyn" tau_syn="2." e_rev="-10."/>
     <alphaCondSynapse id="gabaSyn" tau_syn="10." e_rev="-80."/>
     <network id="PopExample">
         <notes>Testing...</notes>
         <property tag="recommended_dt_ms" value="0.025"/>
         <property tag="recommended_duration_ms" value="1000.0"/>
-        <population id="Epop" component="iafcell" size="4"/>
-        <population id="RSpop" component="iafcell" size="1"/>
-        <projection id="projEI" presynapticPopulation="Epop" postsynapticPopulation="RSpop" synapse="ampaSyn">
-            <connectionWD id="0" preCellId="../Epop[1]" postCellId="../RSpop[0]" weight="0.01" delay="1ms"/>
-            <connectionWD id="1" preCellId="../Epop[2]" postCellId="../RSpop[0]" weight="0.01" delay="1ms"/>
+        <population id="Epop" component="iafcell" size="24"/>
+        <population id="Ipop" component="iafcell" size="6"/>
+        <projection id="projEI" presynapticPopulation="Epop" postsynapticPopulation="Ipop" synapse="ampaSyn">
+            <connectionWD id="0" preCellId="../Epop[0]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="1" preCellId="../Epop[0]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="2" preCellId="../Epop[0]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="3" preCellId="../Epop[1]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="4" preCellId="../Epop[1]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="5" preCellId="../Epop[1]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="6" preCellId="../Epop[1]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="7" preCellId="../Epop[1]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="8" preCellId="../Epop[1]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="9" preCellId="../Epop[2]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="10" preCellId="../Epop[2]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="11" preCellId="../Epop[2]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="12" preCellId="../Epop[2]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="13" preCellId="../Epop[2]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="14" preCellId="../Epop[2]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="15" preCellId="../Epop[3]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="16" preCellId="../Epop[3]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="17" preCellId="../Epop[3]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="18" preCellId="../Epop[3]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="19" preCellId="../Epop[3]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="20" preCellId="../Epop[4]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="21" preCellId="../Epop[4]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="22" preCellId="../Epop[4]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="23" preCellId="../Epop[4]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="24" preCellId="../Epop[4]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="25" preCellId="../Epop[4]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="26" preCellId="../Epop[5]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="27" preCellId="../Epop[5]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="28" preCellId="../Epop[5]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="29" preCellId="../Epop[5]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="30" preCellId="../Epop[5]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="31" preCellId="../Epop[6]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="32" preCellId="../Epop[6]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="33" preCellId="../Epop[6]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="34" preCellId="../Epop[6]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="35" preCellId="../Epop[6]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="36" preCellId="../Epop[6]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="37" preCellId="../Epop[7]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="38" preCellId="../Epop[7]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="39" preCellId="../Epop[7]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="40" preCellId="../Epop[7]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="41" preCellId="../Epop[7]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="42" preCellId="../Epop[8]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="43" preCellId="../Epop[8]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="44" preCellId="../Epop[8]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="45" preCellId="../Epop[8]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="46" preCellId="../Epop[8]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="47" preCellId="../Epop[9]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="48" preCellId="../Epop[9]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="49" preCellId="../Epop[9]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="50" preCellId="../Epop[10]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="51" preCellId="../Epop[10]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="52" preCellId="../Epop[10]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="53" preCellId="../Epop[10]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="54" preCellId="../Epop[10]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="55" preCellId="../Epop[11]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="56" preCellId="../Epop[11]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="57" preCellId="../Epop[11]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="58" preCellId="../Epop[11]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="59" preCellId="../Epop[12]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="60" preCellId="../Epop[12]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="61" preCellId="../Epop[12]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="62" preCellId="../Epop[12]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="63" preCellId="../Epop[12]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="64" preCellId="../Epop[13]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="65" preCellId="../Epop[13]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="66" preCellId="../Epop[13]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="67" preCellId="../Epop[13]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="68" preCellId="../Epop[14]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="69" preCellId="../Epop[14]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="70" preCellId="../Epop[14]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="71" preCellId="../Epop[14]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="72" preCellId="../Epop[15]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="73" preCellId="../Epop[15]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="74" preCellId="../Epop[15]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="75" preCellId="../Epop[15]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="76" preCellId="../Epop[15]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="77" preCellId="../Epop[16]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="78" preCellId="../Epop[16]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="79" preCellId="../Epop[16]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="80" preCellId="../Epop[16]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="81" preCellId="../Epop[16]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="82" preCellId="../Epop[16]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="83" preCellId="../Epop[17]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="84" preCellId="../Epop[17]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="85" preCellId="../Epop[17]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="86" preCellId="../Epop[17]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="87" preCellId="../Epop[18]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="88" preCellId="../Epop[18]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="89" preCellId="../Epop[18]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="90" preCellId="../Epop[18]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="91" preCellId="../Epop[18]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="92" preCellId="../Epop[19]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="93" preCellId="../Epop[19]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="94" preCellId="../Epop[19]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="95" preCellId="../Epop[19]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="96" preCellId="../Epop[20]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="97" preCellId="../Epop[20]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="98" preCellId="../Epop[20]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="99" preCellId="../Epop[20]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="100" preCellId="../Epop[20]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="101" preCellId="../Epop[21]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="102" preCellId="../Epop[21]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="103" preCellId="../Epop[21]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="104" preCellId="../Epop[21]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="105" preCellId="../Epop[21]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="106" preCellId="../Epop[22]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="107" preCellId="../Epop[22]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="108" preCellId="../Epop[22]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="109" preCellId="../Epop[22]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="110" preCellId="../Epop[22]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="111" preCellId="../Epop[23]" postCellId="../Ipop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="112" preCellId="../Epop[23]" postCellId="../Ipop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="113" preCellId="../Epop[23]" postCellId="../Ipop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="114" preCellId="../Epop[23]" postCellId="../Ipop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="115" preCellId="../Epop[23]" postCellId="../Ipop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="116" preCellId="../Epop[23]" postCellId="../Ipop[5]" weight="0.01" delay="1ms"/>
+        </projection>
+        <projection id="projIE" presynapticPopulation="Ipop" postsynapticPopulation="Epop" synapse="gabaSyn">
+            <connectionWD id="0" preCellId="../Ipop[0]" postCellId="../Epop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="1" preCellId="../Ipop[0]" postCellId="../Epop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="2" preCellId="../Ipop[0]" postCellId="../Epop[6]" weight="0.01" delay="1ms"/>
+            <connectionWD id="3" preCellId="../Ipop[0]" postCellId="../Epop[7]" weight="0.01" delay="1ms"/>
+            <connectionWD id="4" preCellId="../Ipop[0]" postCellId="../Epop[10]" weight="0.01" delay="1ms"/>
+            <connectionWD id="5" preCellId="../Ipop[0]" postCellId="../Epop[11]" weight="0.01" delay="1ms"/>
+            <connectionWD id="6" preCellId="../Ipop[0]" postCellId="../Epop[12]" weight="0.01" delay="1ms"/>
+            <connectionWD id="7" preCellId="../Ipop[0]" postCellId="../Epop[14]" weight="0.01" delay="1ms"/>
+            <connectionWD id="8" preCellId="../Ipop[0]" postCellId="../Epop[15]" weight="0.01" delay="1ms"/>
+            <connectionWD id="9" preCellId="../Ipop[0]" postCellId="../Epop[16]" weight="0.01" delay="1ms"/>
+            <connectionWD id="10" preCellId="../Ipop[0]" postCellId="../Epop[17]" weight="0.01" delay="1ms"/>
+            <connectionWD id="11" preCellId="../Ipop[0]" postCellId="../Epop[18]" weight="0.01" delay="1ms"/>
+            <connectionWD id="12" preCellId="../Ipop[0]" postCellId="../Epop[19]" weight="0.01" delay="1ms"/>
+            <connectionWD id="13" preCellId="../Ipop[0]" postCellId="../Epop[20]" weight="0.01" delay="1ms"/>
+            <connectionWD id="14" preCellId="../Ipop[0]" postCellId="../Epop[22]" weight="0.01" delay="1ms"/>
+            <connectionWD id="15" preCellId="../Ipop[0]" postCellId="../Epop[23]" weight="0.01" delay="1ms"/>
+            <connectionWD id="16" preCellId="../Ipop[1]" postCellId="../Epop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="17" preCellId="../Ipop[1]" postCellId="../Epop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="18" preCellId="../Ipop[1]" postCellId="../Epop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="19" preCellId="../Ipop[1]" postCellId="../Epop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="20" preCellId="../Ipop[1]" postCellId="../Epop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="21" preCellId="../Ipop[1]" postCellId="../Epop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="22" preCellId="../Ipop[1]" postCellId="../Epop[6]" weight="0.01" delay="1ms"/>
+            <connectionWD id="23" preCellId="../Ipop[1]" postCellId="../Epop[7]" weight="0.01" delay="1ms"/>
+            <connectionWD id="24" preCellId="../Ipop[1]" postCellId="../Epop[8]" weight="0.01" delay="1ms"/>
+            <connectionWD id="25" preCellId="../Ipop[1]" postCellId="../Epop[9]" weight="0.01" delay="1ms"/>
+            <connectionWD id="26" preCellId="../Ipop[1]" postCellId="../Epop[10]" weight="0.01" delay="1ms"/>
+            <connectionWD id="27" preCellId="../Ipop[1]" postCellId="../Epop[11]" weight="0.01" delay="1ms"/>
+            <connectionWD id="28" preCellId="../Ipop[1]" postCellId="../Epop[12]" weight="0.01" delay="1ms"/>
+            <connectionWD id="29" preCellId="../Ipop[1]" postCellId="../Epop[13]" weight="0.01" delay="1ms"/>
+            <connectionWD id="30" preCellId="../Ipop[1]" postCellId="../Epop[15]" weight="0.01" delay="1ms"/>
+            <connectionWD id="31" preCellId="../Ipop[1]" postCellId="../Epop[16]" weight="0.01" delay="1ms"/>
+            <connectionWD id="32" preCellId="../Ipop[1]" postCellId="../Epop[17]" weight="0.01" delay="1ms"/>
+            <connectionWD id="33" preCellId="../Ipop[1]" postCellId="../Epop[19]" weight="0.01" delay="1ms"/>
+            <connectionWD id="34" preCellId="../Ipop[1]" postCellId="../Epop[20]" weight="0.01" delay="1ms"/>
+            <connectionWD id="35" preCellId="../Ipop[1]" postCellId="../Epop[21]" weight="0.01" delay="1ms"/>
+            <connectionWD id="36" preCellId="../Ipop[1]" postCellId="../Epop[22]" weight="0.01" delay="1ms"/>
+            <connectionWD id="37" preCellId="../Ipop[1]" postCellId="../Epop[23]" weight="0.01" delay="1ms"/>
+            <connectionWD id="38" preCellId="../Ipop[2]" postCellId="../Epop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="39" preCellId="../Ipop[2]" postCellId="../Epop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="40" preCellId="../Ipop[2]" postCellId="../Epop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="41" preCellId="../Ipop[2]" postCellId="../Epop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="42" preCellId="../Ipop[2]" postCellId="../Epop[7]" weight="0.01" delay="1ms"/>
+            <connectionWD id="43" preCellId="../Ipop[2]" postCellId="../Epop[8]" weight="0.01" delay="1ms"/>
+            <connectionWD id="44" preCellId="../Ipop[2]" postCellId="../Epop[9]" weight="0.01" delay="1ms"/>
+            <connectionWD id="45" preCellId="../Ipop[2]" postCellId="../Epop[11]" weight="0.01" delay="1ms"/>
+            <connectionWD id="46" preCellId="../Ipop[2]" postCellId="../Epop[12]" weight="0.01" delay="1ms"/>
+            <connectionWD id="47" preCellId="../Ipop[2]" postCellId="../Epop[14]" weight="0.01" delay="1ms"/>
+            <connectionWD id="48" preCellId="../Ipop[2]" postCellId="../Epop[15]" weight="0.01" delay="1ms"/>
+            <connectionWD id="49" preCellId="../Ipop[2]" postCellId="../Epop[16]" weight="0.01" delay="1ms"/>
+            <connectionWD id="50" preCellId="../Ipop[2]" postCellId="../Epop[17]" weight="0.01" delay="1ms"/>
+            <connectionWD id="51" preCellId="../Ipop[2]" postCellId="../Epop[18]" weight="0.01" delay="1ms"/>
+            <connectionWD id="52" preCellId="../Ipop[2]" postCellId="../Epop[19]" weight="0.01" delay="1ms"/>
+            <connectionWD id="53" preCellId="../Ipop[2]" postCellId="../Epop[20]" weight="0.01" delay="1ms"/>
+            <connectionWD id="54" preCellId="../Ipop[2]" postCellId="../Epop[21]" weight="0.01" delay="1ms"/>
+            <connectionWD id="55" preCellId="../Ipop[2]" postCellId="../Epop[22]" weight="0.01" delay="1ms"/>
+            <connectionWD id="56" preCellId="../Ipop[2]" postCellId="../Epop[23]" weight="0.01" delay="1ms"/>
+            <connectionWD id="57" preCellId="../Ipop[3]" postCellId="../Epop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="58" preCellId="../Ipop[3]" postCellId="../Epop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="59" preCellId="../Ipop[3]" postCellId="../Epop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="60" preCellId="../Ipop[3]" postCellId="../Epop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="61" preCellId="../Ipop[3]" postCellId="../Epop[7]" weight="0.01" delay="1ms"/>
+            <connectionWD id="62" preCellId="../Ipop[3]" postCellId="../Epop[9]" weight="0.01" delay="1ms"/>
+            <connectionWD id="63" preCellId="../Ipop[3]" postCellId="../Epop[10]" weight="0.01" delay="1ms"/>
+            <connectionWD id="64" preCellId="../Ipop[3]" postCellId="../Epop[11]" weight="0.01" delay="1ms"/>
+            <connectionWD id="65" preCellId="../Ipop[3]" postCellId="../Epop[12]" weight="0.01" delay="1ms"/>
+            <connectionWD id="66" preCellId="../Ipop[3]" postCellId="../Epop[13]" weight="0.01" delay="1ms"/>
+            <connectionWD id="67" preCellId="../Ipop[3]" postCellId="../Epop[14]" weight="0.01" delay="1ms"/>
+            <connectionWD id="68" preCellId="../Ipop[3]" postCellId="../Epop[15]" weight="0.01" delay="1ms"/>
+            <connectionWD id="69" preCellId="../Ipop[3]" postCellId="../Epop[17]" weight="0.01" delay="1ms"/>
+            <connectionWD id="70" preCellId="../Ipop[3]" postCellId="../Epop[18]" weight="0.01" delay="1ms"/>
+            <connectionWD id="71" preCellId="../Ipop[3]" postCellId="../Epop[19]" weight="0.01" delay="1ms"/>
+            <connectionWD id="72" preCellId="../Ipop[3]" postCellId="../Epop[21]" weight="0.01" delay="1ms"/>
+            <connectionWD id="73" preCellId="../Ipop[3]" postCellId="../Epop[22]" weight="0.01" delay="1ms"/>
+            <connectionWD id="74" preCellId="../Ipop[3]" postCellId="../Epop[23]" weight="0.01" delay="1ms"/>
+            <connectionWD id="75" preCellId="../Ipop[4]" postCellId="../Epop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="76" preCellId="../Ipop[4]" postCellId="../Epop[1]" weight="0.01" delay="1ms"/>
+            <connectionWD id="77" preCellId="../Ipop[4]" postCellId="../Epop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="78" preCellId="../Ipop[4]" postCellId="../Epop[5]" weight="0.01" delay="1ms"/>
+            <connectionWD id="79" preCellId="../Ipop[4]" postCellId="../Epop[6]" weight="0.01" delay="1ms"/>
+            <connectionWD id="80" preCellId="../Ipop[4]" postCellId="../Epop[7]" weight="0.01" delay="1ms"/>
+            <connectionWD id="81" preCellId="../Ipop[4]" postCellId="../Epop[9]" weight="0.01" delay="1ms"/>
+            <connectionWD id="82" preCellId="../Ipop[4]" postCellId="../Epop[10]" weight="0.01" delay="1ms"/>
+            <connectionWD id="83" preCellId="../Ipop[4]" postCellId="../Epop[11]" weight="0.01" delay="1ms"/>
+            <connectionWD id="84" preCellId="../Ipop[4]" postCellId="../Epop[12]" weight="0.01" delay="1ms"/>
+            <connectionWD id="85" preCellId="../Ipop[4]" postCellId="../Epop[13]" weight="0.01" delay="1ms"/>
+            <connectionWD id="86" preCellId="../Ipop[4]" postCellId="../Epop[15]" weight="0.01" delay="1ms"/>
+            <connectionWD id="87" preCellId="../Ipop[4]" postCellId="../Epop[16]" weight="0.01" delay="1ms"/>
+            <connectionWD id="88" preCellId="../Ipop[4]" postCellId="../Epop[17]" weight="0.01" delay="1ms"/>
+            <connectionWD id="89" preCellId="../Ipop[4]" postCellId="../Epop[18]" weight="0.01" delay="1ms"/>
+            <connectionWD id="90" preCellId="../Ipop[4]" postCellId="../Epop[19]" weight="0.01" delay="1ms"/>
+            <connectionWD id="91" preCellId="../Ipop[4]" postCellId="../Epop[20]" weight="0.01" delay="1ms"/>
+            <connectionWD id="92" preCellId="../Ipop[4]" postCellId="../Epop[21]" weight="0.01" delay="1ms"/>
+            <connectionWD id="93" preCellId="../Ipop[4]" postCellId="../Epop[23]" weight="0.01" delay="1ms"/>
+            <connectionWD id="94" preCellId="../Ipop[5]" postCellId="../Epop[0]" weight="0.01" delay="1ms"/>
+            <connectionWD id="95" preCellId="../Ipop[5]" postCellId="../Epop[2]" weight="0.01" delay="1ms"/>
+            <connectionWD id="96" preCellId="../Ipop[5]" postCellId="../Epop[3]" weight="0.01" delay="1ms"/>
+            <connectionWD id="97" preCellId="../Ipop[5]" postCellId="../Epop[4]" weight="0.01" delay="1ms"/>
+            <connectionWD id="98" preCellId="../Ipop[5]" postCellId="../Epop[6]" weight="0.01" delay="1ms"/>
+            <connectionWD id="99" preCellId="../Ipop[5]" postCellId="../Epop[8]" weight="0.01" delay="1ms"/>
+            <connectionWD id="100" preCellId="../Ipop[5]" postCellId="../Epop[9]" weight="0.01" delay="1ms"/>
+            <connectionWD id="101" preCellId="../Ipop[5]" postCellId="../Epop[10]" weight="0.01" delay="1ms"/>
+            <connectionWD id="102" preCellId="../Ipop[5]" postCellId="../Epop[11]" weight="0.01" delay="1ms"/>
+            <connectionWD id="103" preCellId="../Ipop[5]" postCellId="../Epop[12]" weight="0.01" delay="1ms"/>
+            <connectionWD id="104" preCellId="../Ipop[5]" postCellId="../Epop[13]" weight="0.01" delay="1ms"/>
+            <connectionWD id="105" preCellId="../Ipop[5]" postCellId="../Epop[14]" weight="0.01" delay="1ms"/>
+            <connectionWD id="106" preCellId="../Ipop[5]" postCellId="../Epop[16]" weight="0.01" delay="1ms"/>
+            <connectionWD id="107" preCellId="../Ipop[5]" postCellId="../Epop[17]" weight="0.01" delay="1ms"/>
+            <connectionWD id="108" preCellId="../Ipop[5]" postCellId="../Epop[18]" weight="0.01" delay="1ms"/>
+            <connectionWD id="109" preCellId="../Ipop[5]" postCellId="../Epop[19]" weight="0.01" delay="1ms"/>
+            <connectionWD id="110" preCellId="../Ipop[5]" postCellId="../Epop[20]" weight="0.01" delay="1ms"/>
+            <connectionWD id="111" preCellId="../Ipop[5]" postCellId="../Epop[22]" weight="0.01" delay="1ms"/>
+            <connectionWD id="112" preCellId="../Ipop[5]" postCellId="../Epop[23]" weight="0.01" delay="1ms"/>
         </projection>
         <inputList id="stim" population="Epop" component="poissonFiringSyn100Hz">
             <input id="0" target="../Epop[0]" destination="synapses"/>
             <input id="1" target="../Epop[1]" destination="synapses"/>
             <input id="2" target="../Epop[2]" destination="synapses"/>
             <input id="3" target="../Epop[3]" destination="synapses"/>
+            <input id="4" target="../Epop[4]" destination="synapses"/>
+            <input id="5" target="../Epop[5]" destination="synapses"/>
+            <input id="6" target="../Epop[6]" destination="synapses"/>
+            <input id="7" target="../Epop[7]" destination="synapses"/>
+            <input id="8" target="../Epop[8]" destination="synapses"/>
+            <input id="9" target="../Epop[9]" destination="synapses"/>
+            <input id="10" target="../Epop[10]" destination="synapses"/>
+            <input id="11" target="../Epop[11]" destination="synapses"/>
+            <input id="12" target="../Epop[12]" destination="synapses"/>
+            <input id="13" target="../Epop[13]" destination="synapses"/>
+            <input id="14" target="../Epop[14]" destination="synapses"/>
+            <input id="15" target="../Epop[15]" destination="synapses"/>
+            <input id="16" target="../Epop[16]" destination="synapses"/>
+            <input id="17" target="../Epop[17]" destination="synapses"/>
+            <input id="18" target="../Epop[18]" destination="synapses"/>
+            <input id="19" target="../Epop[19]" destination="synapses"/>
+            <input id="20" target="../Epop[20]" destination="synapses"/>
+            <input id="21" target="../Epop[21]" destination="synapses"/>
+            <input id="22" target="../Epop[22]" destination="synapses"/>
+            <input id="23" target="../Epop[23]" destination="synapses"/>
         </inputList>
     </network>
 </neuroml>
