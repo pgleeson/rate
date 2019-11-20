@@ -1,0 +1,100 @@
+{
+    "PopExample": {
+        "version": "NeuroMLlite v0.1.9", 
+        "seed": 1234, 
+        "parameters": {
+            "weightInput": 1, 
+            "fractionE": 0.8, 
+            "N": 5
+        }, 
+        "notes": "Testing...", 
+        "cells": [
+            {
+                "iafcell": {
+                    "pynn_cell": "IF_cond_alpha", 
+                    "parameters": {
+                        "tau_refrac": 0
+                    }
+                }
+            }
+        ], 
+        "synapses": [
+            {
+                "ampaSyn": {
+                    "pynn_synapse_type": "cond_alpha", 
+                    "pynn_receptor_type": "excitatory", 
+                    "parameters": {
+                        "e_rev": -10, 
+                        "tau_syn": 2
+                    }
+                }
+            }, 
+            {
+                "gabaSyn": {
+                    "pynn_synapse_type": "cond_alpha", 
+                    "pynn_receptor_type": "inhibitory", 
+                    "parameters": {
+                        "e_rev": -80, 
+                        "tau_syn": 10
+                    }
+                }
+            }
+        ], 
+        "input_sources": [
+            {
+                "poissonFiringSyn100Hz": {
+                    "neuroml2_source_file": "inputs.nml"
+                }
+            }, 
+            {
+                "poissonFiringSyn100Hz": {
+                    "neuroml2_source_file": "inputs.nml"
+                }
+            }
+        ], 
+        "populations": [
+            {
+                "Epop": {
+                    "size": "int(N*fractionE)", 
+                    "component": "iafcell", 
+                    "properties": {
+                        "color": ".7 0 0"
+                    }
+                }
+            }, 
+            {
+                "RSpop": {
+                    "size": "N - int(N*fractionE)", 
+                    "component": "iafcell", 
+                    "properties": {
+                        "color": "0 0 .7"
+                    }
+                }
+            }
+        ], 
+        "projections": [
+            {
+                "projEI": {
+                    "presynaptic": "Epop", 
+                    "postsynaptic": "RSpop", 
+                    "synapse": "ampaSyn", 
+                    "delay": 1, 
+                    "weight": 0.01, 
+                    "random_connectivity": {
+                        "probability": 0.8
+                    }
+                }
+            }
+        ], 
+        "inputs": [
+            {
+                "stim": {
+                    "input_source": "poissonFiringSyn100Hz", 
+                    "population": "Epop", 
+                    "percentage": 100.0, 
+                    "weight": "weightInput"
+                }
+            }
+        ]
+    }
+}

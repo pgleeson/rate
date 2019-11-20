@@ -1,0 +1,12 @@
+{
+    "SimPopExample": {
+        "version": "NeuroMLlite v0.1.9", 
+        "network": "PopExample.json", 
+        "duration": 1000.0, 
+        "dt": 0.025, 
+        "seed": 1111, 
+        "recordTraces": {
+            "all": "*"
+        }
+    }
+}
